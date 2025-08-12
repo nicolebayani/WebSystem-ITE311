@@ -1,0 +1,8 @@
+nohup: ignoring input
+[Tue Aug 12 12:16:44 2025] PHP 8.2.12 Development Server (http://127.0.0.1:8000) started
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63218 Accepted
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63218 [200]: GET /
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63218 Closing
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63225 Accepted
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63225 [200]: GET /favicon.ico
+[Tue Aug 12 12:17:19 2025] 127.0.0.1:63225 Closing
