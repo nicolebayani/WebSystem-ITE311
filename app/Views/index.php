@@ -12,7 +12,6 @@ $path = trim(service('uri')->getPath(), '/');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEARNIFY</title>
 
-   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -44,7 +43,7 @@ $path = trim(service('uri')->getPath(), '/');
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8B0000;">
     <div class="container">
-        
+    
         <a class="navbar-brand fw-bold" href="<?= site_url() ?>">LEARNIFY</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -55,7 +54,7 @@ $path = trim(service('uri')->getPath(), '/');
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                 
+                    
                     <a class="nav-link <?= $path === '' ? 'active' : '' ?>" href="<?= site_url() ?>">Home</a>
                 </li>
                 <li class="nav-item">

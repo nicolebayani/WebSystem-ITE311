@@ -10,9 +10,9 @@ $path = trim(service('uri')->getPath(), '/');
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEARNIFY</title>
+    <title>About | LEARNIFY</title>
 
-   
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -44,7 +44,6 @@ $path = trim(service('uri')->getPath(), '/');
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8B0000;">
     <div class="container">
-        
         <a class="navbar-brand fw-bold" href="<?= site_url() ?>">LEARNIFY</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -55,7 +54,6 @@ $path = trim(service('uri')->getPath(), '/');
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                 
                     <a class="nav-link <?= $path === '' ? 'active' : '' ?>" href="<?= site_url() ?>">Home</a>
                 </li>
                 <li class="nav-item">
@@ -72,8 +70,8 @@ $path = trim(service('uri')->getPath(), '/');
 
 <div class="container d-flex align-items-center justify-content-center flex-grow-1 py-5">
     <div class="welcome-card">
-        <h1>Welcome to LEARNIFY</h1>
-        <p class="mt-3 mb-0">This is the homepage. Use the navbar to explore About and Contact.</p>
+        <h1>About Us</h1>
+        <p class="mt-3 mb-0">This page tells you more about the Learnify.</p>
     </div>
 </div>
 

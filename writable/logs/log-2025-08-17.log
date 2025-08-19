@@ -1,0 +1,172 @@
+CRITICAL - 2025-08-17 13:22:56 --> ParseError: syntax error, unexpected token "=", expecting end of file
+[Method: GET, Route: about]
+in APPPATH\Views\about.php on line 2.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('about', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('about')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->about()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:19 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: contact.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('contact.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('contact.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('contact.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:21 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: contact.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('contact.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('contact.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('contact.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:22 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:24 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: contact.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('contact.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('contact.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('contact.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:26 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:28 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: contact.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('contact.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('contact.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('contact.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:23:59 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:24:05 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:24:08 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-17 13:24:38 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: about.php]
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(239): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(294): CodeIgniter\Router\AutoRouterImproved->searchLastDefaultController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('about.php', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('about.php')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('about.php')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
