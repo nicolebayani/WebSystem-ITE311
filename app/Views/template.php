@@ -73,7 +73,6 @@ $path = trim(service('uri')->getPath(), '/');
 <div class="container d-flex align-items-center justify-content-center flex-grow-1 py-5">
     <div class="welcome-card">
         <h1>Welcome to LEARNIFY</h1>
-        <p class="mt-3 mb-0">This is the homepage. Use the navbar to explore About and Contact.</p>
     </div>
 </div>
 

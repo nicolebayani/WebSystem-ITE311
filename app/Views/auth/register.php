@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Authentication System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            transition: all 300ms ease;
+            box-sizing: border-box;
+        }
+        *:focus {
+            outline: 2px solid rgba(128, 0, 32, .3);
+            outline-offset: 2px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(128, 0, 32, 0.9) 0%, rgba(102, 0, 26, 0.8) 50%, rgba(76, 0, 20, 0.9) 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        html {
+            color: rgba(33, 37, 41, 1);
+            font-size: 16px;
+            -webkit-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            background: linear-gradient(135deg, rgba(128, 0, 32, 0.9) 0%, rgba(102, 0, 26, 0.8) 50%, rgba(76, 0, 20, 0.9) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            height: 100%;
+        }
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .auth-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+            overflow: hidden;
+            max-width: 500px;
+            width: 100%;
+            animation: slideUp 0.6s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .auth-header {
+            background: linear-gradient(135deg, rgba(128, 0, 32, .8) 0%, rgba(128, 0, 32, 1) 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .auth-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, .1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .auth-header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+        .auth-header .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .auth-body {
+            padding: 2.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: rgba(33, 37, 41, .8);
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid rgba(242, 242, 242, 1);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 300ms ease;
+            background: rgba(247, 248, 249, .5);
+        }
+        .form-control:focus {
+            border-color: rgba(128, 0, 32, .6);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(128, 0, 32, .1);
+            transform: translateY(-2px);
+        }
+        .form-control:hover {
+            border-color: rgba(128, 0, 32, .3);
+            transform: translateY(-1px);
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 300ms ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, rgba(128, 0, 32, .8) 0%, rgba(128, 0, 32, 1) 100%);
+            color: white;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(128, 0, 32, .3);
+        }
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid;
+            animation: slideDown 0.4s ease-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .alert-success {
+            background-color: rgba(40, 167, 69, .1);
+            border-color: rgba(40, 167, 69, .2);
+            color: rgba(25, 135, 84, 1);
+        }
+        .alert-danger {
+            background-color: rgba(220, 53, 69, .1);
+            border-color: rgba(220, 53, 69, .2);
+            color: rgba(185, 28, 28, 1);
+        }
+        .auth-footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(247, 248, 249, .5);
+            border-top: 1px solid rgba(242, 242, 242, 1);
+        }
+        .auth-footer a {
+            color: rgba(128, 0, 32, 1);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 300ms ease;
+        }
+        .auth-footer a:hover {
+            color: rgba(128, 0, 32, .8);
+            text-decoration: underline;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .password-strength {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+        .password-strength.show {
+            opacity: 1;
+        }
+        .strength-weak { color: #dc3545; }
+        .strength-medium { color: #ffc107; }
+        .strength-strong { color: #28a745; }
+        @media (max-width: 480px) {
+            .auth-card {
+                margin: 1rem;
+                border-radius: 8px;
+            }
+            .auth-header {
+                padding: 1.5rem;
+            }
+            .auth-body {
+                padding: 2rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h1>Join Us Today</h1>
+                <p style="margin: 0; opacity: 0.9;">Create your new account</p>
+            </div>
+            <div class="auth-body">
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i> <?= session()->getFlashdata('success') ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-circle"></i> <?= session()->getFlashdata('error') ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('errors')): ?>
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">
+                            <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                                <li><?= $error ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST" action="<?= base_url('register') ?>">
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name" 
+                               value="<?= old('name') ?>" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               value="<?= old('email') ?>" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock"></i> Password
+                            </label>
+                            <input type="password" class="form-control" id="password" name="password" 
+                                   required placeholder="Create password">
+                            <div class="password-strength" id="passwordStrength">
+                                <span id="strengthText">Password strength</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password_confirm" class="form-label">
+                                <i class="fas fa-check-double"></i> Confirm Password
+                            </label>
+                            <input type="password" class="form-control" id="password_confirm" 
+                                   name="password_confirm" required placeholder="Confirm password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </button>
+                </form>
+
+            </div>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="<?= base_url('login') ?>">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth focus animations
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Password strength checker
+        const passwordInput = document.getElementById('password');
+        const strengthIndicator = document.getElementById('passwordStrength');
+        const strengthText = document.getElementById('strengthText');
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            let text = '';
+            let className = '';
+
+            if (password.length >= 6) strength++;
+            if (password.match(/[a-z]/)) strength++;
+            if (password.match(/[A-Z]/)) strength++;
+            if (password.match(/[0-9]/)) strength++;
+            if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+            if (password.length === 0) {
+                strengthIndicator.classList.remove('show');
+                return;
+            }
+
+            strengthIndicator.classList.add('show');
+
+            if (strength < 3) {
+                text = 'Weak password';
+                className = 'strength-weak';
+            } else if (strength < 5) {
+                text = 'Medium strength';
+                className = 'strength-medium';
+            } else {
+                text = 'Strong password';
+                className = 'strength-strong';
+            }
+
+            strengthText.textContent = text;
+            strengthText.className = className;
+        });
+
+        // Password confirmation validation
+        const confirmInput = document.getElementById('password_confirm');
+        confirmInput.addEventListener('input', function() {
+            if (this.value && this.value !== passwordInput.value) {
+                this.style.borderColor = '#dc3545';
+            } else {
+                this.style.borderColor = '';
+            }
+        });
+
+        // Add loading state to button
+        document.querySelector('form').addEventListener('submit', function() {
+            const btn = this.querySelector('.btn-primary');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+</html>
