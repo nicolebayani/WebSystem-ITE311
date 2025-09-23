@@ -10,12 +10,17 @@ $routes->get('home', 'Home::index');
 $routes->get('about', 'Home::about');
 $routes->get('contact', 'Home::contact');
 
-// Authentication routes
+
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::register');
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 $routes->get('/dashboard', 'Auth::dashboard');
+
+
+$routes->get('admin/dashboard', 'AdminController::index');
+
+$routes->get('user/dashboard', 'UserController::index');
 
 $routes->setAutoRoute(true);

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Authentication System</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             transition: all 300ms ease;
@@ -25,8 +26,7 @@
             min-height: 100vh;
             height: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
         }
         html {
             color: rgba(33, 37, 41, 1);
@@ -39,7 +39,7 @@
             height: 100%;
         }
         .auth-container {
-            min-height: 100vh;
+            flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -234,7 +234,7 @@
         .alert-danger {
             background-color: rgba(128, 0, 32, 0.8);
             border-color: rgba(220, 53, 69, .2);
-            color: rgba(185, 28, 28, 1);
+            color: rgba(255, 255, 255, 1);
         }
         .auth-footer {
             text-align: center;
@@ -281,6 +281,7 @@
     </style>
 </head>
 <body>
+<?= $this->include('partials/navbar') ?>
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
@@ -348,8 +349,9 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Add smooth focus animations
+       
         document.querySelectorAll('.form-control').forEach(input => {
             input.addEventListener('focus', function() {
                 this.parentElement.style.transform = 'scale(1.02)';
@@ -359,7 +361,7 @@
             });
         });
 
-        // Add loading state to button
+       
         document.querySelector('form').addEventListener('submit', function() {
             const btn = this.querySelector('.btn-primary');
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';

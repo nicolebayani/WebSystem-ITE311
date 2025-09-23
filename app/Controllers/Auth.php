@@ -7,6 +7,12 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Auth extends BaseController
 {
+    public function __construct()
+    {
+        helper(['form', 'url']);
+        $this->validation = \Config\Services::validation();
+    }
+
     public function register()
     {
         $db = \Config\Database::connect();
@@ -50,7 +56,7 @@ class Auth extends BaseController
                     'name' => $this->request->getPost('name'),
                     'email' => $this->request->getPost('email'),
                     'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-                    'role' => 'user',
+                    'role' => 'student',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ];
@@ -63,7 +69,7 @@ class Auth extends BaseController
                     session()->setFlashdata('error', 'Registration failed. Please try again.');
                 }
             } else {
-                session()->setFlashdata('errors', $this->validator->getErrors());
+                session()->setFlashdata('errors', $this->validation->getErrors());
             }
         }
 
@@ -99,6 +105,8 @@ class Auth extends BaseController
                 $user = $builder->where('email', $email)->get()->getRow();
 
                 if ($user && password_verify($password, $user->password)) {
+                    // Regenerate session ID on successful login for security
+                    session()->regenerate();
                     $sessionData = [
                         'userID' => $user->id,
                         'name' => $user->name,
@@ -109,12 +117,22 @@ class Auth extends BaseController
                     
                     session()->set($sessionData);
                     session()->setFlashdata('success', 'Welcome back, ' . $user->name . '!');
-                    return redirect()->to(base_url('dashboard'));
+                    // Redirect based on role
+                    $role = strtolower($user->role ?? '');
+                    if ($role === 'admin') {
+                        return redirect()->to(base_url('admin/dashboard'));
+                    } elseif ($role === 'teacher') {
+                        return redirect()->to(base_url('teacher/dashboard'));
+                    } elseif ($role === 'student') {
+                        return redirect()->to(base_url('student/dashboard'));
+                    }
+                    // Fallback
+                    return redirect()->to(base_url('user/dashboard'));
                 } else {
                     session()->setFlashdata('error', 'Invalid email or password.');
                 }
             } else {
-                session()->setFlashdata('errors', $this->validator->getErrors());
+                session()->setFlashdata('errors', $this->validation->getErrors());
             }
         }
 

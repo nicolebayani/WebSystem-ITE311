@@ -1,0 +1,308 @@
+ERROR - 2025-09-06 05:17:16 --> mysqli_sql_exception: Table 'lms_bayani.ci_sessions' doesn't exist in engine in C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('ede01b7bd0c30e7...')
+#6 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\Services.php(715): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(968): service('session')
+#16 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Views\auth\login.php(294): session()
+#17 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\View\View.php(226): include('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#19 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(1167): CodeIgniter\View\View->render('auth/login', Array, true)
+#20 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Controllers\Auth.php(121): view('auth/login')
+#21 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#22 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#23 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#24 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#25 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#26 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#27 {main}
+CRITICAL - 2025-09-06 05:17:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('ede01b7bd0c30e78a0245bc4622dea11')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(968): service('session')
+14 APPPATH\Views\auth\login.php(294): session()
+15 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+16 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+17 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+18 APPPATH\Controllers\Auth.php(121): view('auth/login')
+19 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+20 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+21 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+22 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+24 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-06 05:17:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:ede01b7bd0c30e78a0245bc4622dea11\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:ede01b7bd0c30e78a0245bc4622dea11\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('ede01b7bd0c30e78a0245bc4622dea11')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(968): service('session')
+16 APPPATH\Views\auth\login.php(294): session()
+17 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+18 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+19 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+20 APPPATH\Controllers\Auth.php(121): view('auth/login')
+21 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+22 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+23 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+24 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+25 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+26 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-06 05:17:16 --> [Caused by] mysqli_sql_exception: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:ede01b7bd0c30e78a0245bc4622dea11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:ede01b7bd0c30e78a0245bc4622dea11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:ede01b7bd0c30e78a0245bc4622dea11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('ede01b7bd0c30e78a0245bc4622dea11')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(968): service('session')
+17 APPPATH\Views\auth\login.php(294): session()
+18 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+19 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+20 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+21 APPPATH\Controllers\Auth.php(121): view('auth/login')
+22 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+23 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+24 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+25 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+26 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+27 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-06 05:30:38 --> mysqli_sql_exception: Table 'lms_bayani.ci_sessions' doesn't exist in engine in C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('b8785f503707f3e...')
+#6 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\Services.php(715): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(968): service('session')
+#16 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Views\auth\login.php(294): session()
+#17 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\View\View.php(226): include('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#19 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Common.php(1167): CodeIgniter\View\View->render('auth/login', Array, true)
+#20 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Controllers\Auth.php(121): view('auth/login')
+#21 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#22 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#23 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#24 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#25 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#26 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#27 {main}
+CRITICAL - 2025-09-06 05:30:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('b8785f503707f3e9ad433b25362b8b18')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(968): service('session')
+14 APPPATH\Views\auth\login.php(294): session()
+15 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+16 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+17 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+18 APPPATH\Controllers\Auth.php(121): view('auth/login')
+19 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+20 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+21 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+22 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+24 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-06 05:30:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:b8785f503707f3e9ad433b25362b8b18\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:b8785f503707f3e9ad433b25362b8b18\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('b8785f503707f3e9ad433b25362b8b18')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(968): service('session')
+16 APPPATH\Views\auth\login.php(294): session()
+17 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+18 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+19 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+20 APPPATH\Controllers\Auth.php(121): view('auth/login')
+21 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+22 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+23 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+24 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+25 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+26 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-06 05:30:39 --> [Caused by] mysqli_sql_exception: Table 'lms_bayani.ci_sessions' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:b8785f503707f3e9ad433b25362b8b18\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:b8785f503707f3e9ad433b25362b8b18\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:b8785f503707f3e9ad433b25362b8b18\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('b8785f503707f3e9ad433b25362b8b18')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(715): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(968): service('session')
+17 APPPATH\Views\auth\login.php(294): session()
+18 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\LAB 4 ITE311-BAYANI\\app\\Views\\auth\\login.php')
+19 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+20 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+21 APPPATH\Controllers\Auth.php(121): view('auth/login')
+22 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+23 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+24 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+25 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+26 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+27 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-06 05:46:31 --> mysqli_sql_exception: Can't create table `lms_bayani`.`courses` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Database\Migrations\2025-08-14-091332_CreateCoursesTable.php(23): CodeIgniter\Database\Forge->createTable('courses', true, Array)
+#5 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCoursesTable->up()
+#6 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-09-06 05:46:52 --> mysqli_sql_exception: Can't create table `lms_bayani`.`courses` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Database\Migrations\2025-08-14-091332_CreateCoursesTable.php(23): CodeIgniter\Database\Forge->createTable('courses', true, Array)
+#5 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCoursesTable->up()
+#6 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-09-06 07:28:55 --> mysqli_sql_exception: Table 'lms_bayani.users' doesn't exist in C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\app\Database\Seeds\UserSeeder.php(38): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Database\Seeder.php(149): App\Database\Seeds\UserSeeder->run()
+#7 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\LAB 4 ITE311-BAYANI\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
