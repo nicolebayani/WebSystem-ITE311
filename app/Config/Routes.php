@@ -20,6 +20,8 @@ $routes->get('/dashboard', 'Auth::dashboard');
 
 
 $routes->get('admin/dashboard', 'AdminController::index');
+$routes->get('teacher/dashboard', 'TeacherController::dashboard');
+$routes->get('student/dashboard', 'StudentController::dashboard');
 
 $routes->get('user/dashboard', 'UserController::index');
 
