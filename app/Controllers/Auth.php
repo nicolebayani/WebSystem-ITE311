@@ -81,6 +81,16 @@ class Auth extends BaseController
         $db = \Config\Database::connect();
         
         if ($this->request->getMethod() === 'POST') {
+            // Throttle login attempts by email+IP to mitigate brute-force
+            $throttler = \Config\Services::throttler();
+            $ipAddress = $this->request->getIPAddress();
+            $emailIdentifier = strtolower((string) $this->request->getPost('email'));
+            $throttleKey = $emailIdentifier . '|' . $ipAddress;
+
+            if (!$throttler->check($throttleKey, 5, MINUTE)) { // max 5 attempts per minute
+                session()->setFlashdata('error', 'Too many login attempts. Please try again in a minute.');
+                return redirect()->back()->withInput();
+            }
             $rules = [
                 'email' => [
                     'rules' => 'required|valid_email',
