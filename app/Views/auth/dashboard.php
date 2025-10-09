@@ -535,7 +535,7 @@
                 .dashboard-content {
                     margin-left: 240px; /* sidebar width */
                     min-height: 100vh;
-                    background: #f8f9fa;
+                    background: #ffffff;
                 }
                 @media (max-width: 768px) {
                     .dashboard-content {

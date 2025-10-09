@@ -18,7 +18,7 @@ $path = trim(service('uri')->getPath(), '/');
 
     <style>
         body {
-            background: linear-gradient(135deg, #a72c2c, #e0b4b4);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;

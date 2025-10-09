@@ -1,156 +1,93 @@
 :root {
     --maroon: #800000;
     --maroon-dark: #660000;
-    --maroon-light: #a04040;
+    --maroon-light: #A06464;
     --white: #ffffff;
     --light-gray: #f8f9fa;
-    --gray: #e9ecef;
-    --dark-gray: #6c757d;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
-    font-family: var(--font-family-sans-serif);
     background-color: var(--light-gray);
-    color: #212529;
-    margin: 0;
 }
 
-.wrapper {
-    display: flex;
-    min-height: 100vh;
+/* Sidebar Navigation */
+.navbar.bg-dark {
+    background-color: var(--maroon) !important;
 }
 
-#sidebar {
-    min-width: 260px;
-    max-width: 260px;
-    background: #8B0000;
+.navbar-dark .navbar-nav .nav-link {
     color: var(--white);
-    transition: all 0.3s;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.06);
 }
 
-#sidebar.active {
-    margin-left: -250px;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    background-color: var(--maroon-dark);
 }
 
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: var(--maroon-dark);
-    text-align: center;
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: var(--maroon-light);
 }
 
-#sidebar ul.components {
-    padding: 12px 8px;
-    border-bottom: none;
+/* Bootstrap Overrides for Maroon and White Theme */
+.bg-primary,
+.badge.bg-primary {
+    background-color: var(--maroon) !important;
 }
 
-#sidebar ul p {
-    color: var(--white);
-    padding: 10px;
+.bg-success,
+.badge.bg-success {
+    background-color: var(--maroon-light) !important;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-    color: var(--white);
-    text-decoration: none;
+.bg-warning,
+.badge.bg-warning {
+    background-color: #D3A0A0 !important; /* Lighter maroon for warning */
+    color: #000 !important;
 }
 
-#sidebar ul li a:hover {
+.bg-info,
+.badge.bg-info {
+    background-color: #EAEAEA !important; /* Light gray for info */
+    color: #000 !important;
+}
+
+.bg-danger,
+.badge.bg-danger {
+    background-color: var(--maroon-dark) !important;
+}
+
+.btn-outline-primary {
     color: var(--maroon);
-    background: var(--white);
+    border-color: var(--maroon);
 }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
+.btn-outline-primary:hover {
     color: var(--white);
-    background: var(--maroon-light);
-}
-
-#sidebar .sidebar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 20px;
-    background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-#sidebar .sidebar-brand .brand-icon {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.12);
-}
-
-#sidebar .sidebar-brand .brand-text {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-#sidebar .components { margin: 0; padding: 12px 8px; }
-#sidebar .components .nav-item { list-style: none; }
-#sidebar .components .nav-link { color: var(--white) !important; }
-#sidebar .components .nav-link .icon { color: var(--white); opacity: 0.92; }
-#sidebar .components .nav-link:hover { color: var(--white) !important; }
-
-#sidebar .components .active > .nav-link,
-#sidebar .components .nav-link.active {
-    background: var(--maroon-light);
-}
-
-/* Responsive collapse for small screens */
-@media (max-width: 992px) {
-    #sidebar { margin-left: -260px; }
-    #sidebar.active { margin-left: 0; }
-}
-
-#content {
-    flex: 1 1 auto;
-    width: auto;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.card-header {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--gray);
-    font-weight: bold;
-}
-
-.btn-primary {
     background-color: var(--maroon);
     border-color: var(--maroon);
 }
 
-.btn-primary:hover {
-    background-color: var(--maroon-dark);
-    border-color: var(--maroon-dark);
+.btn-outline-success {
+    color: var(--maroon-light);
+    border-color: var(--maroon-light);
 }
 
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+.btn-outline-success:hover {
+    color: var(--white);
+    background-color: var(--maroon-light);
+    border-color: var(--maroon-light);
 }
 
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
+/* Card and Table Styles */
+.card {
+    border: 1px solid var(--maroon-light);
+}
+
+.card-header {
+    background-color: var(--maroon-light);
+    color: var(--white);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(128, 0, 0, 0.05);
 }

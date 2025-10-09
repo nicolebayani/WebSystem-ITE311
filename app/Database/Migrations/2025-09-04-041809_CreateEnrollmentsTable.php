@@ -12,7 +12,7 @@ class CreateEnrollmentsTable extends Migration
             'id'         => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
             'user_id'    => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
             'course_id'  => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
-            'enrolled_at'=> ['type' => 'DATETIME', 'null' => true, 'default' => null],
+            'enrollment_date'=> ['type' => 'DATETIME', 'null' => true, 'default' => null],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addUniqueKey(['user_id','course_id']);

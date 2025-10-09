@@ -4,7 +4,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?= base_url('css/modern.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
+    <style>
+        :root {
+            --maroon: #800000;
+            --maroon-dark: #5a0000;
+            --maroon-light: #a13c3c;
+            --light-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: var(--maroon) !important;
+        }
+
+        .navbar .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffd700 !important; /* gold hover/active effect */
+        }
+
+        .navbar .dropdown-menu {
+            background-color: var(--maroon-dark) !important;
+        }
+
+        .navbar .dropdown-item {
+            color: white !important;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: var(--maroon-light) !important;
+            color: white !important;
+        }
+
+        /* --- DASHBOARD CONTENT --- */
+        .dashboard-content {
+            margin-left: 240px; /* sidebar width */
+            min-height: 100vh;
+            background: var(--light-bg);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-content {
+                margin-left: 0;
+            }
+        }
+
+        /* --- CARDS --- */
+        .card {
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(128, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: var(--maroon) !important;
+            color: white !important;
+            font-weight: 500;
+            border-bottom: none;
+        }
+
+        .card-header h5,
+        .card-header h6 {
+            color: white !important;
+        }
+
+        /* --- BADGES --- */
+        .badge.bg-dark {
+            background-color: var(--maroon) !important;
+        }
+
+        .badge.bg-secondary {
+            background-color: var(--maroon-light) !important;
+        }
+
+        /* --- TABLES --- */
+        table thead {
+            background-color: var(--maroon);
+            color: white;
+        }
+
+        table tbody tr:hover {
+            background-color: #f9eaea;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-outline-primary {
+            border-color: white !important;
+            color: white !important;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: white !important;
+            color: var(--maroon) !important;
+        }
+
+        /* --- HEADINGS --- */
+        h2 {
+            color: var(--maroon-dark);
+        }
+
+        /* Adjust spacing for buttons in headers */
+        .card-header .btn {
+            margin-left: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -19,8 +141,9 @@
 
                 <div class="row g-3">
                     <div class="col-lg-8">
-                        <div class="card border-0 shadow-sm mb-3">
-                            <div class="card-header bg-white">
+                        <!-- My Courses -->
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-header">
                                 <h5 class="mb-0">My Courses</h5>
                             </div>
                             <div class="card-body">
@@ -39,8 +162,9 @@
                             </div>
                         </div>
 
-                        <div class="card border-0 shadow-sm mb-3">
-                            <div class="card-header bg-white">
+                        <!-- Recent Grades & Feedback -->
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-header">
                                 <h5 class="mb-0">Recent Grades & Feedback</h5>
                             </div>
                             <div class="card-body">
@@ -74,8 +198,9 @@
                             </div>
                         </div>
 
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-white">
+                        <!-- Upcoming Deadlines -->
+                        <div class="card shadow-sm">
+                            <div class="card-header">
                                 <h6 class="mb-0">Upcoming Deadlines</h6>
                             </div>
                             <div class="card-body">
@@ -96,9 +221,10 @@
                         </div>
                     </div>
 
+                    <!-- Notifications -->
                     <div class="col-lg-4">
-                        <div class="card border-0 shadow-sm mb-3">
-                            <div class="card-header bg-white">
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-header">
                                 <h6 class="mb-0">Notifications</h6>
                             </div>
                             <div class="card-body">
@@ -117,24 +243,9 @@
                     </div>
                 </div>
             </div>
-</body>
-</html>
-
         </div>
     </div>
 
-    <style>
-        .dashboard-content {
-            margin-left: 240px; /* sidebar width */
-            min-height: 100vh;
-            background: #f8f9fa;
-        }
-        @media (max-width: 768px) {
-            .dashboard-content {
-                margin-left: 0;
-            }
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

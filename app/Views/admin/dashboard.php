@@ -4,7 +4,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?= base_url('css/modern.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
+    <style>
+        :root {
+            --maroon: #800000;
+            --maroon-dark: #5a0000;
+            --maroon-light: #a13c3c;
+            --light-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: var(--maroon) !important;
+        }
+
+        .navbar .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color:rgb(255, 255, 255) !important; /* gold hover/active effect */
+        }
+
+        .navbar .dropdown-menu {
+            background-color: var(--maroon-dark) !important;
+        }
+
+        .navbar .dropdown-item {
+            color: white !important;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: var(--maroon-light) !important;
+            color: white !important;
+        }
+
+        /* --- DASHBOARD CONTENT --- */
+        .dashboard-content {
+            margin-left: 240px;
+            min-height: 100vh;
+            background: var(--light-bg);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-content {
+                margin-left: 0;
+            }
+        }
+
+        /* --- CARDS --- */
+        .card {
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(128, 0, 0, 0.15);
+        }
+
+        /* Card header styling */
+        .card-header {
+            background-color: var(--maroon) !important;
+            color: white !important;
+            font-weight: 500;
+            border-bottom: none;
+        }
+
+        .card-header h5 {
+            color: white !important;
+        }
+
+        /* --- BADGES --- */
+        .badge.bg-primary {
+            background-color: var(--maroon) !important;
+        }
+
+        .badge.bg-success {
+            background-color: #a13c3c !important;
+        }
+
+        .badge.bg-warning {
+            background-color: #f5c6cb !important;
+            color: var(--maroon-dark) !important;
+        }
+
+        .badge.bg-info {
+            background-color: #f8d7da !important;
+            color: var(--maroon-dark) !important;
+        }
+
+        .badge.bg-danger {
+            background-color: var(--maroon-dark) !important;
+        }
+
+        .badge.bg-secondary {
+            background-color: var(--maroon-light) !important;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-outline-primary {
+            border-color: white !important;
+            color: white !important;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: white !important;
+            color: var(--maroon) !important;
+        }
+
+        .btn-outline-success {
+            border-color: white !important;
+            color: white !important;
+        }
+
+        .btn-outline-success:hover {
+            background-color: white !important;
+            color: var(--maroon-dark) !important;
+        }
+
+        /* --- TABLES --- */
+        table thead {
+            background-color: var(--maroon);
+            color: white;
+        }
+
+        table tbody tr:hover {
+            background-color: #f9eaea;
+        }
+
+        /* --- HEADINGS --- */
+        h2 {
+            color: var(--maroon-dark);
+        }
+
+        /* Adjust spacing for buttons in headers */
+        .card-header .btn {
+            margin-left: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -72,14 +222,13 @@
                     </div>
                 </div>
 
+                <!-- Maroon Navbar Header -->
                 <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-white">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Recent Activity</h5>
-                            <div>
-                                <a href="#" class="btn btn-sm btn-outline-primary">Manage Users</a>
-                                <a href="#" class="btn btn-sm btn-outline-success">Manage Courses</a>
-                            </div>
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Recent Activity</h5>
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Manage Users</a>
+                            <a href="#" class="btn btn-sm btn-outline-success">Manage Courses</a>
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -115,24 +264,9 @@
                     </div>
                 </div>
             </div>
-</body>
-</html>
-
         </div>
     </div>
 
-    <style>
-        .dashboard-content {
-            margin-left: 240px; /* sidebar width */
-            min-height: 100vh;
-            background: #f8f9fa;
-        }
-        @media (max-width: 768px) {
-            .dashboard-content {
-                margin-left: 0;
-            }
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
