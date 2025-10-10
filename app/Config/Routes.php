@@ -25,6 +25,9 @@ $routes->get('student/dashboard', 'StudentController::dashboard');
 
 $routes->get('user/dashboard', 'UserController::index');
 
+// Course Enrollment Route
+$routes->post('/course/enroll', 'Course::enroll');
+
 // Admin routes
 $routes->group('admin', function($routes) {
     $routes->get('users', 'AdminController::users');
@@ -50,7 +53,6 @@ $routes->group('teacher', function($routes) {
 // Student routes
 $routes->group('student', function($routes) {
     $routes->get('courses', 'StudentController::courses');
-    $routes->get('enroll', 'StudentController::enroll');
     $routes->get('assignments', 'StudentController::assignments');
     $routes->get('grades', 'StudentController::grades');
     $routes->get('progress', 'StudentController::progress');

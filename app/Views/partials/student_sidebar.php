@@ -34,6 +34,16 @@
                     </a>
                 </li>
 
+                <!-- Enrollment Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url('student/dashboard') ?>">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="me-1">
+                            <path d="M15 12c0 .55-.45 1-1 1h-2v2c0 .55-.45 1-1 1s-1-.45-1-1v-2H9c-.55 0-1-.45-1-1s.45-1 1-1h2V9c0-.55.45-1 1-1s1 .45 1 1v2h2c.55 0 1 .45 1 1zM8 20c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2H8v2zm10-16H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h3.27c-.15-.58-.27-1.28-.27-2 0-3.31 2.69-6 6-6 .72 0 1.42.12 2.05.35L18 4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        Enrollment
+                    </a>
+                </li>
+
                 <!-- Learning Group -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="learningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,17 +53,11 @@
                         Learning
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="learningDropdown">
-                        <li><a class="dropdown-item" href="<?= site_url('student/courses') ?>">
+                        <li><a class="dropdown-item" href="<?= site_url('student/dashboard') ?>">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="me-2">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
                             My Courses
-                        </a></li>
-                        <li><a class="dropdown-item" href="<?= site_url('student/enroll') ?>">
-                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="me-2">
-                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-                            </svg>
-                            Enroll in Course
                         </a></li>
                         <li><a class="dropdown-item" href="<?= site_url('student/progress') ?>">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="me-2">

@@ -139,6 +139,8 @@
                     <span class="badge bg-dark ms-3 text-uppercase">Student</span>
                 </div>
 
+                <div id="enrollment-alert"></div>
+
                 <div class="row g-3">
                     <div class="col-lg-8">
                         <!-- My Courses -->
@@ -151,11 +153,33 @@
                                 <?php if (empty($courses)): ?>
                                     <p class="text-muted mb-0">You are not enrolled in any courses yet.</p>
                                 <?php else: ?>
-                                    <div class="list-group">
+                                    <div class="list-group" id="enrolled-courses-list">
                                         <?php foreach ($courses as $course): ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <?= esc($course['title'] ?? 'Untitled Course') ?>
                                             </a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <!-- Available Courses -->
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-header">
+                                <h5 class="mb-0">Available Courses</h5>
+                            </div>
+                            <div class="card-body">
+                                <?php $available = $available_courses ?? []; ?>
+                                <?php if (empty($available)): ?>
+                                    <p class="text-muted mb-0">No new courses available for enrollment.</p>
+                                <?php else: ?>
+                                    <div class="list-group" id="available-courses-list">
+                                        <?php foreach ($available as $course): ?>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <?= esc($course['title'] ?? 'Untitled Course') ?>
+                                                <button class="btn btn-primary btn-sm enroll-btn" data-course-id="<?= $course['id'] ?>">Enroll</button>
+                                            </div>
                                         <?php endforeach; ?>
                                     </div>
                                 <?php endif; ?>
@@ -247,5 +271,43 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#available-courses-list').on('click', '.enroll-btn', function(e) {
+            e.preventDefault();
+            var button = $(this);
+            var courseId = button.data('course-id');
+
+            $.post('<?= site_url('/course/enroll') ?>', { course_id: courseId, csrf_test_name: '<?= csrf_hash() ?>' }, function(response) {
+                var alertDiv = $('#enrollment-alert');
+                if (response.success) {
+                    alertDiv.html('<div class="alert alert-success alert-dismissible fade show" role="alert">' + response.message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
+                    
+                    var courseItem = button.closest('.list-group-item');
+                    var courseTitle = courseItem.contents().filter(function() {
+                        return this.nodeType === 3;
+                    }).text().trim();
+
+                    // Add to enrolled list
+                    if ($('#enrolled-courses-list').find('.list-group-item').length === 0) {
+                        $('#enrolled-courses-list').html(''); // Remove the 'not enrolled' message
+                    }
+                    $('#enrolled-courses-list').append('<a href="#" class="list-group-item list-group-item-action">' + courseTitle + '</a>');
+                    
+                    // Remove from available list
+                    courseItem.remove();
+
+                    if ($('#available-courses-list').children().length === 0) {
+                        $('#available-courses-list').html('<p class="text-muted mb-0">No new courses available for enrollment.</p>');
+                    }
+
+                } else {
+                    alertDiv.html('<div class="alert alert-danger alert-dismissible fade show" role="alert">' + response.message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
+                }
+            }, 'json');
+        });
+    });
+    </script>
 </body>
 </html>
