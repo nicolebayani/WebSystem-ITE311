@@ -12,7 +12,7 @@ class CourseModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'description', 'teacher_id'];
+    protected $allowedFields    = ['title', 'description', 'instructor_id'];
 
     // You can add more model settings and methods as needed.
 }

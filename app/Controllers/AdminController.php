@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CourseModel;
 
 class AdminController extends BaseController
 {
@@ -12,29 +13,15 @@ class AdminController extends BaseController
             return redirect()->to('/login')->with('error', 'You do not have permission to access this page.');
         }
 
-        // Get database connection
         $db = \Config\Database::connect();
-        
-        // Get total users count
+        $courseModel = new \App\Models\CourseModel();
+
         $totalUsers = $db->table('users')->countAllResults();
-        
-        // Get active teachers count (users with role 'teacher')
-        $activeTeachers = $db->table('users')
-            ->where('role', 'teacher')
-            ->countAllResults();
-        
-        // Get active students count (users with role 'student')
-        $activeStudents = $db->table('users')
-            ->where('role', 'student')
-            ->countAllResults();
-        
-        // Get total courses count (if courses table exists)
-        $totalCourses = 0;
-        if ($db->tableExists('courses')) {
-            $totalCourses = $db->table('courses')->countAllResults();
-        }
-        
-        // Get recent activity (recent user registrations)
+        $activeTeachers = $db->table('users')->where('role', 'teacher')->countAllResults();
+        $activeStudents = $db->table('users')->where('role', 'student')->countAllResults();
+        $totalCourses = $courseModel->countAllResults();
+        $courses = $courseModel->findAll();
+
         $recentActivity = $db->table('users')
             ->select('name, email, role, created_at')
             ->orderBy('created_at', 'DESC')
@@ -53,9 +40,40 @@ class AdminController extends BaseController
             'totalCourses' => $totalCourses,
             'activeTeachers' => $activeTeachers,
             'activeStudents' => $activeStudents,
-            'recentActivity' => $recentActivity
+            'recentActivity' => $recentActivity,
+            'courses' => $courses
         ];
 
         return view('admin/dashboard', $data);
+    }
+
+    public function createCourse()
+    {
+        if (!session()->get('isLoggedIn') || session()->get('role') !== 'admin') {
+            return redirect()->to('/login')->with('error', 'You do not have permission to access this page.');
+        }
+
+        return view('admin/create_course');
+    }
+
+    public function storeCourse()
+    {
+        if (!session()->get('isLoggedIn') || session()->get('role') !== 'admin') {
+            return redirect()->to('/login')->with('error', 'You do not have permission to access this page.');
+        }
+
+        $courseModel = new CourseModel();
+
+        $data = [
+            'title'       => $this->request->getPost('title'),
+            'description' => $this->request->getPost('description'),
+            'instructor_id'  => session()->get('userID'), // Use instructor_id to match DB
+        ];
+
+        if ($courseModel->save($data)) {
+            return redirect()->to('/admin/dashboard')->with('success', 'Course created successfully.');
+        } else {
+            return redirect()->back()->withInput()->with('errors', $courseModel->errors());
+        }
     }
 }

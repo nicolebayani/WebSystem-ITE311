@@ -13,6 +13,11 @@ class Course extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'You must be logged in to enroll.']);
         }
 
+        // Check user role. Students are not allowed to enroll themselves.
+        if (session()->get('role') === 'student') {
+            return $this->response->setJSON(['success' => false, 'message' => 'You do not have permission to enroll in courses.']);
+        }
+
         $enrollmentModel = new EnrollmentModel();
         $user_id = session()->get('id');
         $course_id = $this->request->getPost('course_id');

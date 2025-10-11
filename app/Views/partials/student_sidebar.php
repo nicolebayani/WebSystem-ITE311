@@ -36,7 +36,7 @@
 
                 <!-- Enrollment Link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('student/dashboard') ?>">
+                    <a class="nav-link" href="<?= site_url('student/courses') ?>">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="me-1">
                             <path d="M15 12c0 .55-.45 1-1 1h-2v2c0 .55-.45 1-1 1s-1-.45-1-1v-2H9c-.55 0-1-.45-1-1s.45-1 1-1h2V9c0-.55.45-1 1-1s1 .45 1 1v2h2c.55 0 1 .45 1 1zM8 20c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2H8v2zm10-16H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h3.27c-.15-.58-.27-1.28-.27-2 0-3.31 2.69-6 6-6 .72 0 1.42.12 2.05.35L18 4c0-1.1-.9-2-2-2z"/>
                         </svg>

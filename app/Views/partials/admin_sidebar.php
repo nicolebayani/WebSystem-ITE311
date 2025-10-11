@@ -55,6 +55,12 @@
                             </svg>
                             Manage Courses
                         </a></li>
+                        <li><a class="dropdown-item" href="<?= site_url('admin/courses/create') ?>">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="me-2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                            Add Course
+                        </a></li>
                     </ul>
                 </li>
 

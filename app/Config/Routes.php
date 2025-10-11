@@ -32,6 +32,8 @@ $routes->post('/course/enroll', 'Course::enroll');
 $routes->group('admin', function($routes) {
     $routes->get('users', 'AdminController::users');
     $routes->get('courses', 'AdminController::courses');
+    $routes->get('courses/create', 'AdminController::createCourse');
+    $routes->post('courses/store', 'AdminController::storeCourse');
     $routes->get('analytics', 'AdminController::analytics');
     $routes->get('reports', 'AdminController::reports');
     $routes->get('settings', 'AdminController::settings');
@@ -52,13 +54,13 @@ $routes->group('teacher', function($routes) {
 
 // Student routes
 $routes->group('student', function($routes) {
-    $routes->get('courses', 'StudentController::courses');
-    $routes->get('assignments', 'StudentController::assignments');
-    $routes->get('grades', 'StudentController::grades');
-    $routes->get('progress', 'StudentController::progress');
-    $routes->get('calendar', 'StudentController::calendar');
-    $routes->get('announcements', 'StudentController::announcements');
-    $routes->get('profile', 'StudentController::profile');
+    $routes->get('courses', 'StudentController::courses', ['filter' => 'auth']);
+    $routes->get('assignments', 'StudentController::assignments', ['filter' => 'auth']);
+    $routes->get('grades', 'StudentController::grades', ['filter' => 'auth']);
+    $routes->get('progress', 'StudentController::progress', ['filter' => 'auth']);
+    $routes->get('calendar', 'StudentController::calendar', ['filter' => 'auth']);
+    $routes->get('announcements', 'StudentController::announcements', ['filter' => 'auth']);
+    $routes->get('profile', 'StudentController::profile', ['filter' => 'auth']);
 });
 
 // User routes
