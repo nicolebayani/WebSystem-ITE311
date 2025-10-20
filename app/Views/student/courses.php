@@ -28,6 +28,37 @@
         h2 {
             color: var(--maroon-dark);
         }
+               .navbar {
+            background-color: var(--maroon) !important;
+        }
+
+        .navbar .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffffffff !important; /* gold hover/active effect */
+        }
+
+        .navbar .dropdown-menu {
+            background-color: var(--maroon-dark) !important;
+        }
+
+        .navbar .dropdown-item {
+            color: white !important;    
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: var(--maroon-light) !important;
+            color: white !important;
+        }
     </style>
 </head>
 <body>
@@ -48,13 +79,41 @@
                     </div>
                     <div class="card-body">
                         <?php $available = $available_courses ?? []; ?>
+
+                        <!-- Enrolled courses (if any) -->
+                        <?php $enrolled = $enrolled_courses ?? []; ?>
+                        <?php if (!empty($enrolled)) : ?>
+                            <div class="mb-4">
+                                <h6>Your Enrolled Course<?= count($enrolled) > 1 ? 's' : '' ?></h6>
+                                <div class="list-group">
+                                    <?php foreach ($enrolled as $c) : ?>
+                                        <div class="list-group-item">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1"><?= esc($c['title'] ?? 'Untitled Course') ?></h5>
+                                            </div>
+                                            <p class="mb-1 text-muted"><?= esc($c['description'] ?? 'No description available.') ?></p>
+                                            <small class="text-secondary">Instructor: <?= esc($c['instructor_name'] ?? 'TBA') ?></small>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php else: ?>
+                            <p class="text-muted mb-0">You are not enrolled in any courses yet.</p>
+                        <?php endif; ?>
+
+                        <hr />
+
+                        <h6 class="mb-3">Available to Enroll</h6>
                         <?php if (empty($available)) : ?>
                             <p class="text-muted mb-0">No new courses available for enrollment.</p>
                         <?php else : ?>
                             <div class="list-group" id="available-courses-list">
                                 <?php foreach ($available as $course) : ?>
                                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                                        <?= esc($course['title'] ?? 'Untitled Course') ?>
+                                        <div>
+                                            <strong><?= esc($course['title'] ?? 'Untitled Course') ?></strong>
+                                            <div class="small text-muted"><?= esc($course['description'] ?? '') ?></div>
+                                        </div>
                                         <button class="btn btn-primary btn-sm enroll-btn" data-course-id="<?= $course['id'] ?>">Enroll</button>
                                     </div>
                                 <?php endforeach; ?>

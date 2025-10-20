@@ -25,8 +25,8 @@ $routes->get('student/dashboard', 'StudentController::dashboard');
 
 $routes->get('user/dashboard', 'UserController::index');
 
-// Course Enrollment Route
-$routes->post('/course/enroll', 'Course::enroll');
+// Course Enrollment Route - Moved inside student group for consistency
+// $routes->post('/course/enroll', 'StudentController::enroll');
 
 // Admin routes
 $routes->group('admin', function($routes) {
@@ -43,7 +43,10 @@ $routes->group('admin', function($routes) {
 // Teacher routes
 $routes->group('teacher', function($routes) {
     $routes->get('courses', 'TeacherController::courses');
+    $routes->get('course/(:num)', 'TeacherController::courseDetails/$1');
+    $routes->post('course/(:num)/unenroll', 'TeacherController::unenrollStudent/$1');
     $routes->get('create-course', 'TeacherController::createCourse');
+    $routes->post('store-course', 'TeacherController::storeCourse');
     $routes->get('students', 'TeacherController::students');
     $routes->get('assignments', 'TeacherController::assignments');
     $routes->get('gradebook', 'TeacherController::gradebook');
@@ -55,6 +58,7 @@ $routes->group('teacher', function($routes) {
 // Student routes
 $routes->group('student', function($routes) {
     $routes->get('courses', 'StudentController::courses', ['filter' => 'auth']);
+    $routes->post('enroll', 'StudentController::enroll', ['filter' => 'auth']);
     $routes->get('assignments', 'StudentController::assignments', ['filter' => 'auth']);
     $routes->get('grades', 'StudentController::grades', ['filter' => 'auth']);
     $routes->get('progress', 'StudentController::progress', ['filter' => 'auth']);

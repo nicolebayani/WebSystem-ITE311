@@ -1118,3 +1118,985 @@ in SYSTEMPATH\Filters\Filters.php on line 590.
  5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:29:45 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:31:59 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:32:00 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:32:00 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:32:09 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:32:11 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:33:13 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:34:07 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(61): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:34:10 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(61): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:35:39 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(61): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:16 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:17 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:17 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:17 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:18 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:18 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:18 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:19 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:37:41 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 06:44:51 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:03:06 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:03:10 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:03:11 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:03:17 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:03:20 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:04:21 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:04:27 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:04:32 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: POST, Route: student/enroll]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:08:10 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(122): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:08:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(122): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:08:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:08:10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:08:10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(122): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:08:11 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:08:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:08:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:08:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(122): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:09:12 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:09:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:09:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:09:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:12 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:09:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:09:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:09:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:09:14 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:09:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'5\', \'2025-10-11 07:09:14\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'5\', \'2025-10-11 07:09:14\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:14 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'5\', \'2025-10-11 07:09:14\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'5\', \'2025-10-11 07:09:14\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'5\', \'2025-10-11 07:09:14\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:09:15 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:09:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'6\', \'2025-10-11 07:09:15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'6\', \'2025-10-11 07:09:15\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:15 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'6\', \'2025-10-11 07:09:15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'6\', \'2025-10-11 07:09:15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'6\', \'2025-10-11 07:09:15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:09:16 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:09:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'7\', \'2025-10-11 07:09:16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'7\', \'2025-10-11 07:09:16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:16 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'7\', \'2025-10-11 07:09:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'7\', \'2025-10-11 07:09:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'7\', \'2025-10-11 07:09:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:09:18 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:14:56 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:14:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:14:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:14:56\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:14:56\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:14:56 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:14:56\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:14:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:14:56\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:17:12 --> ParseError: Unclosed '{' on line 10
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentController.php on line 183.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\StudentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\StudentController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:17:13 --> ParseError: Unclosed '{' on line 10
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentController.php on line 183.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\StudentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\StudentController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:17:13 --> ParseError: Unclosed '{' on line 10
+[Method: GET, Route: student/dashboard]
+in APPPATH\Controllers\StudentController.php on line 183.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-BAYANI\\app\\Controllers\\StudentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\StudentController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:17:21 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser(Array)
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-10-11 07:17:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+[Method: POST, Route: course/enroll]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:17:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:17:21\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:17:21\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:17:21 --> [Caused by] mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:17:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:17:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (NULL, \'4\', \'2025-10-11 07:17:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `enrollments` (`user_id`, `course_id`, `enrollment_date`) VALUES (:user_id:, :course_id.1:, :enrollment_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\EnrollmentModel.php(48): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\StudentController.php(132): App\Models\EnrollmentModel->enrollUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 07:19:27 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:19:27 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:19:59 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:19:59 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:20:07 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:20:07 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:20:08 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:20:08 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:20:18 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:20:18 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:21:59 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:21:59 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:22:16 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:22:16 --> Error in enroll(): Failed to insert enrollment record
+ERROR - 2025-10-11 07:27:17 --> mysqli_sql_exception: Unknown column 'enrollment_date' in 'field list' in C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-BAYANI\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `en...', 0)
+#1 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `en...')
+#2 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `en...')
+#3 C:\xampp\htdocs\ITE311-BAYANI\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `en...', Array, false)
+#4 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ITE311-BAYANI\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ITE311-BAYANI\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ITE311-BAYANI\app\Controllers\StudentController.php(152): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(933): App\Controllers\StudentController->enroll()
+#9 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+#10 C:\xampp\htdocs\ITE311-BAYANI\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-BAYANI\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-BAYANI\index.php(63): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2025-10-11 07:27:17 --> Error in enroll(): Failed to insert enrollment record

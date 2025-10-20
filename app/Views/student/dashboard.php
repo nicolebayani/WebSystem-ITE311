@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="<?= csrf_hash() ?>">
     <title>Student Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
@@ -35,7 +36,7 @@
 
         .navbar .nav-link:hover,
         .navbar .nav-link.active {
-            color: #ffd700 !important; /* gold hover/active effect */
+            color: #ffffffff !important; /* gold hover/active effect */
         }
 
         .navbar .dropdown-menu {
@@ -43,7 +44,7 @@
         }
 
         .navbar .dropdown-item {
-            color: white !important;
+            color: white !important;    
         }
 
         .navbar .dropdown-item:hover {
@@ -146,7 +147,7 @@
                         <!-- My Courses -->
                         <div class="card shadow-sm mb-3">
                             <div class="card-header">
-                                <h5 class="mb-0">My Courses</h5>
+                                <h5 class="mb-0">My Course</h5>
                             </div>
                             <div class="card-body">
                                 <?php $courses = $enrolled_courses ?? []; ?>
@@ -268,46 +269,99 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#available-courses-list').on('click', '.enroll-btn', function(e) {
-            e.preventDefault();
-            var button = $(this);
-            var courseId = button.data('course-id');
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            // Function to show alert message
+            function showAlert(message, type = 'success') {
+                const alertHtml = `
+                    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                        ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+                $('#enrollment-alert').html(alertHtml);
+                
+                // Auto-hide after 5 seconds
+                setTimeout(() => {
+                    $('.alert').fadeOut('slow');
+                }, 5000);
+            }
 
-            $.post('<?= site_url('/course/enroll') ?>', { course_id: courseId, csrf_test_name: '<?= csrf_hash() ?>' }, function(response) {
-                var alertDiv = $('#enrollment-alert');
-                if (response.success) {
-                    alertDiv.html('<div class="alert alert-success alert-dismissible fade show" role="alert">' + response.message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
-                    
-                    var courseItem = button.closest('.list-group-item');
-                    var courseTitle = courseItem.contents().filter(function() {
-                        return this.nodeType === 3;
-                    }).text().trim();
-
-                    // Add to enrolled list
-                    if ($('#enrolled-courses-list').find('.list-group-item').length === 0) {
-                        $('#enrolled-courses-list').html(''); // Remove the 'not enrolled' message
+            // Handle enroll button click
+            $(document).on('click', '.enroll-btn', function() {
+                const button = $(this);
+                const courseId = button.data('course-id');
+                const courseItem = button.closest('.list-group-item');
+                const courseTitle = courseItem.contents().filter(function() {
+                    return this.nodeType === 3;
+                }).text().trim();
+                
+                // Disable button to prevent multiple clicks
+                button.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enrolling...');
+                
+                console.log('Sending enrollment request for course ID:', courseId);
+                $.ajax({
+                    url: '<?= site_url('student/enroll') ?>',
+                    type: 'POST',
+                    data: { 
+                        course_id: courseId,
+                        '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log('Enrollment response:', response);
+                        if (response.success) {
+                            // Show success message
+                            showAlert(response.message, 'success');
+                            
+                            // Remove from available courses
+                            courseItem.fadeOut(300, function() {
+                                $(this).remove();
+                                
+                                // Add to enrolled courses
+                                const enrolledList = $('#enrolled-courses-list');
+                                const noCoursesMsg = enrolledList.find('p.text-muted');
+                                
+                                if (noCoursesMsg.length) {
+                                    noCoursesMsg.remove();
+                                    enrolledList.html(''); // Clear the 'no courses' message
+                                }
+                                
+                                enrolledList.append(`
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        ${response.course?.title || courseTitle}
+                                    </a>
+                                `);
+                                
+                                // Update available courses count
+                                const availableCount = $('#available-courses-list .list-group-item').length;
+                                if (availableCount === 0) {
+                                    $('#available-courses-list').html('<p class="text-muted mb-0">No new courses available for enrollment.</p>');
+                                }
+                            });
+                        } else {
+                            // Show error message
+                            showAlert(response.message || 'Failed to enroll in the course. Please try again.', 'danger');
+                            // Re-enable button
+                            button.prop('disabled', false).text('Enroll');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('AJAX Error:', {
+                            status: xhr.status,
+                            statusText: xhr.statusText,
+                            responseText: xhr.responseText,
+                            error: error
+                        });
+                        showAlert('An error occurred while processing your request. Please try again. ' + 
+                                 (xhr.responseJSON?.message || ''), 'danger');
+                        // Re-enable button
+                        button.prop('disabled', false).text('Enroll');
                     }
-                    $('#enrolled-courses-list').append('<a href="#" class="list-group-item list-group-item-action">' + courseTitle + '</a>');
-                    
-                    // Remove from available list
-                    courseItem.remove();
-
-                    if ($('#available-courses-list').children().length === 0) {
-                        $('#available-courses-list').html('<p class="text-muted mb-0">No new courses available for enrollment.</p>');
-                    }
-
-                } else {
-                    alertDiv.html('<div class="alert alert-danger alert-dismissible fade show" role="alert">' + response.message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
-                }
-            }, 'json');
-        });
-    });
-    </script>
-</body>
+                });
+            });
+        </script>
+    </body>
 </html>

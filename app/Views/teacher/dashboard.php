@@ -98,7 +98,7 @@ helper('url');
                                 <?php else: ?>
                                     <div class="list-group">
                                         <?php foreach ($courses as $course): ?>
-                                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                            <a href="<?= site_url('teacher/course/' . ($course['id'] ?? '')) ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                                                 <span><?= esc($course['title'] ?? 'Untitled Course') ?></span>
                                                 <span class="badge bg-secondary"><?= esc($course['students'] ?? 0) ?> students</span>
                                             </a>
@@ -107,7 +107,7 @@ helper('url');
                                 <?php endif; ?>
                             </div>
                             <div class="card-footer bg-white text-end">
-                                <a class="btn btn-primary" href="#">Create New Course</a>
+                                <a class="btn btn-primary" href="<?= base_url('teacher/create-course') ?>">Create New Course</a>
                             </div>
                         </div>
                     </div>
