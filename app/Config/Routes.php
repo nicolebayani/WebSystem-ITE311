@@ -53,6 +53,11 @@ $routes->group('teacher', function($routes) {
     $routes->get('announcements', 'TeacherController::announcements');
     $routes->get('analytics', 'TeacherController::analytics');
     $routes->get('profile', 'TeacherController::profile');
+
+    // Material Routes
+    $routes->match(['get', 'post'], 'course/(:num)/upload', 'Course::upload/$1');
+    $routes->post('material/(:num)/delete', 'Course::delete/$1');
+    $routes->get('material/(:num)/download', 'Course::download/$1');
 });
 
 // Student routes
@@ -65,6 +70,9 @@ $routes->group('student', function($routes) {
     $routes->get('calendar', 'StudentController::calendar', ['filter' => 'auth']);
     $routes->get('announcements', 'StudentController::announcements', ['filter' => 'auth']);
     $routes->get('profile', 'StudentController::profile', ['filter' => 'auth']);
+
+    // Material Download Route
+    $routes->get('material/(:num)/download', 'Course::download/$1', ['filter' => 'auth']);
 });
 
 // User routes
