@@ -83,4 +83,4 @@ $routes->group('user', function($routes) {
     $routes->get('help', 'UserController::help');
 });
 
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);

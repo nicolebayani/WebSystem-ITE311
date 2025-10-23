@@ -93,6 +93,20 @@
                                             </div>
                                             <p class="mb-1 text-muted"><?= esc($c['description'] ?? 'No description available.') ?></p>
                                             <small class="text-secondary">Instructor: <?= esc($c['instructor_name'] ?? 'TBA') ?></small>
+
+                                            <?php if (!empty($c['materials'])): ?>
+                                                <div class="mt-3">
+                                                    <h6>Course Materials</h6>
+                                                    <ul class="list-group list-group-flush">
+                                                        <?php foreach ($c['materials'] as $material): ?>
+                                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                <?= esc($material['file_name']) ?>
+                                                                <a href="<?= site_url('student/material/' . $material['id'] . '/download') ?>" class="btn btn-sm btn-outline-primary">Download</a>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>

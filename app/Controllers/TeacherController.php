@@ -139,7 +139,42 @@ class TeacherController extends BaseController
             return redirect()->to('/teacher/course/' . $courseId)->with('success', 'Student has been unenrolled.');
         }
 
-        return redirect()->back()->with('error', 'Failed to unenroll student.');
+                return redirect()->back()->with('error', 'Failed to unenroll student.');
+    }
+
+    public function courses()
+    {
+        return '<h1>Courses page under construction.</h1>';
+    }
+
+    public function students()
+    {
+        return '<h1>Students page under construction.</h1>';
+    }
+
+    public function assignments()
+    {
+        return '<h1>Assignments page under construction.</h1>';
+    }
+
+    public function gradebook()
+    {
+        return '<h1>Gradebook page under construction.</h1>';
+    }
+
+    public function announcements()
+    {
+        return '<h1>Announcements page under construction.</h1>';
+    }
+
+    public function analytics()
+    {
+        return '<h1>Analytics page under construction.</h1>';
+    }
+
+    public function profile()
+    {
+        return '<h1>Profile page under construction.</h1>';
     }
 
     public function storeCourse()

@@ -42,6 +42,46 @@ class AdminController extends BaseController
             'recentActivity' => $recentActivity
         ];
 
-        return view('admin/dashboard', $data);
+                return view('admin/dashboard', $data);
+    }
+
+    public function users()
+    {
+        return '<h1>Users page under construction.</h1>';
+    }
+
+    public function courses()
+    {
+        return '<h1>Courses page under construction.</h1>';
+    }
+
+    public function createCourse()
+    {
+        return '<h1>Create Course page under construction.</h1>';
+    }
+
+    public function storeCourse()
+    {
+        return '<h1>Store Course page under construction.</h1>';
+    }
+
+    public function analytics()
+    {
+        return '<h1>Analytics page under construction.</h1>';
+    }
+
+    public function reports()
+    {
+        return '<h1>Reports page under construction.</h1>';
+    }
+
+    public function settings()
+    {
+        return '<h1>Settings page under construction.</h1>';
+    }
+
+    public function profile()
+    {
+        return '<h1>Profile page under construction.</h1>';
     }
 }

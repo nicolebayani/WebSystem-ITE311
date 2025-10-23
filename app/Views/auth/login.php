@@ -292,28 +292,29 @@
                 <p style="margin: 0; opacity: 0.9;">Sign in to your account</p>
             </div>
             <div class="auth-body">
-                <?php if (session()->getFlashdata('success')): ?>
+                <?php if (session()->getFlashdata('success')) : ?>
                     <div class="alert alert-success">
-                        <i class="fas fa-check-circle"></i> <?= session()->getFlashdata('success') ?>
+                        <?= session()->getFlashdata('success') ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if (session()->getFlashdata('error')): ?>
+                <?php if (session()->getFlashdata('error')) : ?>
                     <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-circle"></i> <?= session()->getFlashdata('error') ?>
+                        <?= session()->getFlashdata('error') ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if (session()->getFlashdata('errors')): ?>
+                <?php if (session()->getFlashdata('errors')) : ?>
                     <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">
-                            <?php foreach (session()->getFlashdata('errors') as $error): ?>
-                                <li><?= $error ?></li>
+                        <ul>
+                            <?php foreach (session()->getFlashdata('errors') as $error) : ?>
+                                <li><?= esc($error) ?></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
                 <?php endif; ?>
+
+                <!-- Login form ready for use -->
 
                 <form method="POST" action="<?= base_url('login') ?>">
                     <div class="form-group has-icon">
@@ -321,7 +322,7 @@
                             <i class="fas fa-envelope"></i> Email Address
                         </label>
                         <input type="email" class="form-control" id="email" name="email" 
-                               value="<?= old('email') ?>" required placeholder="Enter your email">
+                               value="" required placeholder="Enter your email">
                     </div>
 
                     <div class="form-group has-icon">

@@ -93,17 +93,33 @@ class Course extends BaseController
 
     public function download($material_id)
     {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'You must be logged in to download materials.');
+        }
+
         $materialModel = new MaterialModel();
         $material = $materialModel->find($material_id);
 
-        if ($material) {
-            $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+        if (!$material) {
+            return redirect()->back()->with('error', 'File not found.');
+        }
 
-            if (file_exists($filePath)) {
-                return $this->response->download($filePath, null)->setFileName($material['file_name']);
+        $user_id = session()->get('id');
+        $role = session()->get('role');
+
+        if ($role !== 'teacher') { // Teachers have universal access
+            $enrollmentModel = new EnrollmentModel();
+            if (!$enrollmentModel->isAlreadyEnrolled($user_id, $material['course_id'])) {
+                return redirect()->back()->with('error', 'You are not authorized to download this file.');
             }
         }
 
-        return redirect()->back()->with('error', 'File not found.');
+        $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+
+        if (file_exists($filePath)) {
+            return $this->response->download($filePath, null)->setFileName($material['file_name']);
+        }
+
+        return redirect()->back()->with('error', 'File not found on server.');
     }
 }

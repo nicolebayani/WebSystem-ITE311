@@ -78,19 +78,7 @@ class Auth extends BaseController
 
     public function login()
     {
-        $db = \Config\Database::connect();
-        
         if ($this->request->getMethod() === 'POST') {
-            // Throttle login attempts by email+IP to mitigate brute-force
-            $throttler = \Config\Services::throttler();
-            $ipAddress = $this->request->getIPAddress();
-            $emailIdentifier = strtolower((string) $this->request->getPost('email'));
-            $throttleKey = $emailIdentifier . '|' . $ipAddress;
-
-            if (!$throttler->check($throttleKey, 5, MINUTE)) { // max 5 attempts per minute
-                session()->setFlashdata('error', 'Too many login attempts. Please try again in a minute.');
-                return redirect()->back()->withInput();
-            }
             $rules = [
                 'email' => [
                     'rules' => 'required|valid_email',
@@ -111,37 +99,44 @@ class Auth extends BaseController
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
 
-                $builder = $db->table('users');
-                $user = $builder->where('email', $email)->get()->getRow();
+                try {
+                    $db = \Config\Database::connect();
+                    $builder = $db->table('users');
+                    $user = $builder->where('email', $email)->get()->getRowArray();
 
-                if ($user && password_verify($password, $user->password)) {
-                    // Regenerate session ID on successful login for security
-                    session()->regenerate();
-                    $sessionData = [
-                        'userID' => $user->id,
-                        'name' => $user->name,
-                        'email' => $user->email,
-                        'role' => $user->role,
-                        'isLoggedIn' => true
-                    ];
-                    
-                    session()->set($sessionData);
-                    session()->setFlashdata('success', 'Welcome back, ' . $user->name . '!');
-                    // Redirect based on role
-                    $role = strtolower($user->role ?? '');
-                    if ($role === 'admin') {
-                        return redirect()->to(base_url('admin/dashboard'));
-                    } elseif ($role === 'teacher') {
-                        return redirect()->to(base_url('teacher/dashboard'));
-                    } elseif ($role === 'student') {
-                        return redirect()->to(base_url('student/dashboard'));
+                    if ($user && password_verify($password, $user['password'])) {
+                        $sessionData = [
+                            'userID' => $user['id'],
+                            'name' => $user['name'],
+                            'email' => $user['email'],
+                            'role' => $user['role'],
+                            'isLoggedIn' => true
+                        ];
+                        
+                        session()->set($sessionData);
+                        
+                        log_message('info', 'User ' . $email . ' logged in successfully.');
+
+                        switch ($user['role']) {
+                            case 'admin':
+                                return redirect()->to(base_url('admin/dashboard'));
+                            case 'teacher':
+                                return redirect()->to(base_url('teacher/dashboard'));
+                            case 'student':
+                                return redirect()->to(base_url('student/dashboard'));
+                            default:
+                                return redirect()->to(base_url('dashboard'));
+                        }
+                    } else {
+                        log_message('error', 'Login failed for user ' . $email . '. Invalid credentials.');
+                        session()->setFlashdata('error', 'Invalid email or password.');
                     }
-                    // Fallback
-                    return redirect()->to(base_url('user/dashboard'));
-                } else {
-                    session()->setFlashdata('error', 'Invalid email or password.');
+                } catch (\Exception $e) {
+                    log_message('error', 'Database error during login: ' . $e->getMessage());
+                    session()->setFlashdata('error', 'An unexpected error occurred. Please try again later.');
                 }
             } else {
+                log_message('error', 'Login validation failed: ' . json_encode($this->validation->getErrors()));
                 session()->setFlashdata('errors', $this->validation->getErrors());
             }
         }
