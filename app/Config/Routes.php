@@ -17,12 +17,26 @@ $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 
+// Notification Routes
+$routes->get('/notifications', 'Notifications::get');
+$routes->post('/notifications/mark_read/(:num)', 'Notifications::mark_as_read/$1');
+$routes->post('/notifications/mark_all_read', 'Notifications::mark_all_read');
+
+// Debug Routes
+$routes->get('/debug/session', 'Debug::session');
+$routes->get('/debug/notifications', 'Debug::notifications');
+
 // Material Routes
 $routes->get('teacher/course/(:num)/upload', 'Materials::upload/$1');
 $routes->post('teacher/course/(:num)/upload', 'Materials::upload/$1');
 $routes->get('teacher/course/(:num)/test', 'Materials::test/$1');
 $routes->get('/materials/delete/(:num)', 'Materials::delete/$1');
 $routes->get('/materials/download/(:num)', 'Materials::download/$1');
+
+// Course Material Routes (for both teacher and student access)
+$routes->match(['get', 'post'], 'course/upload/(:num)', 'Course::upload/$1');
+$routes->post('course/delete/(:num)', 'Course::delete/$1');
+$routes->get('course/download/(:num)', 'Course::download/$1');
 
 // Student Course View
 $routes->get('/student/course/(:num)', 'StudentController::course_view/$1');
@@ -66,9 +80,9 @@ $routes->group('teacher', function($routes) {
     $routes->get('profile', 'TeacherController::profile');
 
     // Material Routes
-    $routes->match(['get', 'post'], 'course/(:num)/upload', 'Course::upload/$1');
-    $routes->post('material/(:num)/delete', 'Course::delete/$1');
-    $routes->get('material/(:num)/download', 'Course::download/$1');
+    $routes->match(['get', 'post'], 'course/(:num)/upload', 'Materials::upload/$1');
+    $routes->post('course/(:num)/delete/(:num)', 'Materials::delete/$2');
+    $routes->get('course/(:num)/download/(:num)', 'Materials::download/$2');
 });
 
 // Student routes
@@ -82,8 +96,8 @@ $routes->group('student', function($routes) {
     $routes->get('announcements', 'StudentController::announcements', ['filter' => 'auth']);
     $routes->get('profile', 'StudentController::profile', ['filter' => 'auth']);
 
-    // Material Download Route
-    $routes->get('material/(:num)/download', 'Course::download/$1', ['filter' => 'auth']);
+    // Material Download Route (using main course routes)
+    // Download route is handled by main course routes
 });
 
 // User routes

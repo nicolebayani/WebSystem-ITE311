@@ -16,6 +16,13 @@ $path = trim(service('uri')->getPath(), '/');
         <!-- Navbar Items -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                <!-- Add Font Awesome for icons -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+                
+                <?php if (session()->get('isLoggedIn')): ?>
+                    <?= view('partials/notifications') ?>
+                <?php endif; ?>
+                
                 <li class="nav-item">
                     <a class="nav-link <?= $path === '' ? 'active' : '' ?>" href="<?= site_url() ?>">Home</a>
                 </li>
@@ -167,5 +174,46 @@ $path = trim(service('uri')->getPath(), '/');
     /* Ensure the collapsed (mobile) menu has maroon background so active shows consistently */
     .navbar-collapse {
         background-color: #800000 !important;
+    }
+
+    /* Notifications Styling */
+    .notification-dropdown {
+        min-width: 300px;
+        padding: 0;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .notification-item {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+    }
+
+    .notification-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .notification-item small {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .notification-item p {
+        color: #333;
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* Bell icon styling */
+    .fa-bell {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    /* Badge styling */
+    .badge.bg-danger {
+        font-size: 0.6rem;
+        padding: 0.25em 0.5em;
     }
 </style>

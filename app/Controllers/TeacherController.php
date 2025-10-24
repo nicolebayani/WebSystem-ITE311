@@ -5,16 +5,21 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\CourseModel;
 use App\Models\EnrollmentModel;
+use App\Models\MaterialModel;
+use App\Models\NotificationModel;
 
 class TeacherController extends BaseController
 {
     protected $courseModel;
     protected $enrollmentModel;
+    protected $materialModel;
+    protected $helpers = ['form', 'url'];
 
     public function __construct()
     {
         $this->courseModel = new CourseModel();
         $this->enrollmentModel = new EnrollmentModel();
+        $this->materialModel = new MaterialModel();
     }
 
     public function dashboard()
@@ -51,7 +56,7 @@ class TeacherController extends BaseController
                 'role' => session()->get('role')
             ],
             'courses' => $courses,
-            'notifications' => [],
+            'notifications' => (new NotificationModel())->getNotificationsForUser(session()->get('userID')),
             'recent_activity' => []
         ];
 
@@ -93,6 +98,10 @@ class TeacherController extends BaseController
                                     ->where('enrollments.status', 'enrolled')
                                     ->orderBy('enrollments.enrollment_date', 'DESC')
                                     ->findAll();
+
+        // Get materials for this course
+        $materials = $this->materialModel->getMaterialsByCourse($id);
+
         $data = [
             'user' => [
                 'id' => session()->get('userID'),
@@ -100,6 +109,7 @@ class TeacherController extends BaseController
             ],
             'course' => $course,
             'students' => $students,
+            'materials' => $materials,
         ];
 
         return view('teacher/course_details', $data);

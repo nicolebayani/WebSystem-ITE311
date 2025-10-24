@@ -28,7 +28,7 @@
             </div>
         <?php endif; ?>
 
-        <?= form_open_multipart('teacher/course/' . $course_id . '/upload'); ?>
+        <?= form_open_multipart('course/upload/' . $course_id); ?>
         <!-- Debug: Form action URL: teacher/course/<?= $course_id ?>/upload -->
             <div class="mb-3">
                 <label for="material" class="form-label">Select File (PDF, PPT, DOC)</label>

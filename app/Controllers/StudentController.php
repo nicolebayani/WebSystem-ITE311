@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\EnrollmentModel;
 use App\Models\CourseModel;
 use App\Models\MaterialModel;
+use App\Models\NotificationModel;
 
 class StudentController extends BaseController
 {
@@ -30,6 +31,11 @@ class StudentController extends BaseController
             return !in_array($course['id'], $enrolled_course_ids);
         });
 
+        // Get notifications for the student
+        $notificationModel = new NotificationModel();
+        $notifications = $notificationModel->getNotificationsForUser($user_id);
+        $unreadCount = $notificationModel->getUnreadCount($user_id);
+
         // Prepare data for student dashboard
         $data = [
             'user' => [
@@ -42,7 +48,8 @@ class StudentController extends BaseController
             'available_courses' => $available_courses,
             'upcoming_deadlines' => [],
             'recent_grades' => [],
-            'notifications' => []
+            'notifications' => $notifications,
+            'unreadNotifications' => $unreadCount
         ];
 
         return view('student/dashboard', $data);
@@ -205,6 +212,11 @@ class StudentController extends BaseController
                 $enrollmentId = $enrollmentModel->insert($enrollmentData);
                 
                 if ($enrollmentId) {
+                    // Create notification for successful enrollment
+                    $notificationModel = new NotificationModel();
+                    $notificationMessage = "You have been enrolled in " . $course['title'];
+                    $notificationModel->createNotification($user_id, $notificationMessage);
+                    
                     $db->transCommit();
                     log_message('info', 'Successfully enrolled user ' . $user_id . ' in course ' . $course_id);
                     return $this->response->setJSON([

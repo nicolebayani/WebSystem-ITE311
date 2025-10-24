@@ -1,5 +1,5 @@
 <?php
-helper('url');
+helper(['url', 'form']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -122,6 +122,72 @@ helper('url');
                     </div>
                     <div class="card-body">
                         <p class="mb-4"><?= esc($course['description'] ?? '') ?></p>
+
+                        <!-- Upload Materials Section -->
+                        <div class="mb-4">
+                            <h6 class="mb-3">Upload Course Materials</h6>
+                            <div class="card border">
+                                <div class="card-body">
+                                    <?= form_open_multipart('teacher/course/' . ($course['id'] ?? '') . '/upload', ['class' => 'row g-3']) ?>
+                                        <div class="col-md-8">
+                                            <label for="material" class="form-label">Select File</label>
+                                            <input type="file" name="material" class="form-control" id="material" required accept=".pdf,.ppt,.pptx,.doc,.docx">
+                                            <div class="form-text">Maximum file size: 10MB. Allowed formats: PDF, PPT, PPTX, DOC, DOCX</div>
+                                        </div>
+                                        <div class="col-md-4 d-flex align-items-end">
+                                            <button type="submit" class="btn btn-oval">Upload Material</button>
+                                        </div>
+                                    <?= form_close() ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Materials Section -->
+                        <div class="mb-4">
+                            <h6 class="mb-3">Course Materials (<?= count($materials ?? []) ?>)</h6>
+                            <?php if (empty($materials)): ?>
+                                <p class="text-muted">No materials uploaded yet.</p>
+                            <?php else: ?>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:48px">#</th>
+                                                <th>File Name</th>
+                                                <th>Uploaded At</th>
+                                                <th style="width:130px">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($materials as $i => $material): ?>
+                                                <tr>
+                                                    <td><?= $i + 1 ?></td>
+                                                    <td><?= esc($material['file_name']) ?></td>
+                                                    <td>
+                                                        <?php
+                                                            if (!empty($material['created_at']) && $material['created_at'] !== '0000-00-00 00:00:00') {
+                                                                $dt = new \DateTime($material['created_at']);
+                                                                echo $dt->format('M d, Y \a\t h:i A');
+                                                            } else {
+                                                                echo 'N/A';
+                                                            }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group" role="group">
+                                                            <a href="<?= site_url('teacher/course/' . $course['id'] . '/download/' . $material['id']) ?>" class="btn btn-sm btn-outline-primary">Download</a>
+                                                            <form method="post" action="<?= site_url('teacher/course/' . $course['id'] . '/delete/' . $material['id']) ?>" onsubmit="return confirm('Are you sure you want to delete this material?');" class="d-inline">
+                                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                                            </form>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <?php endif; ?>
+                        </div>
 
                         <h6 class="mb-3">Enrolled Students (<?= count($students ?? []) ?>)</h6>
 

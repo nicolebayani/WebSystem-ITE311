@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Material;
 use App\Models\EnrollmentModel;
+use Exception;
 
 class Materials extends BaseController
 {
@@ -38,7 +39,7 @@ class Materials extends BaseController
         helper(['form', 'url']);
         $data['course_id'] = $course_id;
 
-        if ($this->request->getMethod() === 'post') {
+        sif ($this->request->getMethod() === 'post') {
             // Debug: Log that we received a POST request
             log_message('debug', 'POST request received for upload');
             log_message('debug', 'POST data: ' . json_encode($this->request->getPost()));
@@ -81,7 +82,7 @@ class Materials extends BaseController
 
                             if ($result) {
                                 session()->setFlashdata('success', 'File uploaded successfully.');
-                                return redirect()->to('/teacher/course/' . $course_id);
+                                return redirect()->to('teacher/course/' . $course_id);
                             } else {
                                 session()->setFlashdata('error', 'Failed to save material to database.');
                             }

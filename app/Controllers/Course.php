@@ -46,31 +46,46 @@ class Course extends BaseController
 
     public function upload($course_id)
     {
+        // Check if user is a teacher
+        if (session()->get('role') !== 'teacher') {
+            return redirect()->back()->with('error', 'You do not have permission to upload materials.');
+        }
+        
         $materialModel = new MaterialModel();
-        $data['course_id'] = $course_id;
 
         if ($this->request->getMethod() === 'post') {
             $file = $this->request->getFile('material');
 
             if ($file->isValid() && !$file->hasMoved()) {
+                // Ensure the upload directory exists
+                $uploadPath = WRITEPATH . 'uploads/materials/';
+                if (!is_dir($uploadPath)) {
+                    mkdir($uploadPath, 0755, true);
+                }
+
                 $newName = $file->getRandomName();
-                $file->move(WRITEPATH . 'uploads', $newName);
+                if ($file->move($uploadPath, $newName)) {
+                    $materialData = [
+                        'course_id' => $course_id,
+                        'file_name' => $file->getClientName(),
+                        'file_path' => $newName,
+                    ];
 
-                $materialData = [
-                    'course_id' => $course_id,
-                    'file_name' => $file->getClientName(),
-                    'file_path' => $newName,
-                ];
-
-                $materialModel->insertMaterial($materialData);
-
-                return redirect()->back()->with('success', 'File uploaded successfully.');
+                    if ($materialModel->insertMaterial($materialData)) {
+                        return redirect()->to('teacher/course/' . $course_id)->with('success', 'File uploaded successfully.');
+                    } else {
+                        return redirect()->to('teacher/course/' . $course_id)->with('error', 'Failed to save material to database.');
+                    }
+                } else {
+                    return redirect()->to('teacher/course/' . $course_id)->with('error', 'Failed to move uploaded file.');
+                }
             }
 
-            return redirect()->back()->with('error', 'File upload failed.');
+            return redirect()->to('teacher/course/' . $course_id)->with('error', 'File upload failed.');
         }
 
-        return view('materials/upload', $data);
+        // If GET request, redirect to course details page
+        return redirect()->to('teacher/course/' . $course_id);
     }
 
     public function delete($material_id)
@@ -79,7 +94,7 @@ class Course extends BaseController
         $material = $materialModel->find($material_id);
 
         if ($material) {
-            $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+            $filePath = WRITEPATH . 'uploads/materials/' . $material['file_path'];
             if (file_exists($filePath)) {
                 unlink($filePath);
             }
@@ -114,7 +129,7 @@ class Course extends BaseController
             }
         }
 
-        $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+        $filePath = WRITEPATH . 'uploads/materials/' . $material['file_path'];
 
         if (file_exists($filePath)) {
             return $this->response->download($filePath, null)->setFileName($material['file_name']);

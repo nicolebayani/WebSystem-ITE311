@@ -1,24 +1,171 @@
-<?= $this->extend('layouts/main'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Materials - <?= esc($course['title'] ?? 'Course') ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
+    <style>
+        :root {
+            --maroon: #800000;
+            --maroon-dark: #5c0000;
+            --white: #ffffff;
+        }
 
-<?= $this->section('content'); ?>
-<div class="container mt-5">
-    <h2><?= esc($course['title']); ?></h2>
-    <p><?= esc($course['description']); ?></p>
+        body {
+            background-color: var(--white);
+        }
 
-    <hr>
+        .dashboard-content {
+            margin-left: 240px;
+            min-height: 100vh;
+            background-color: var(--white);
+        }
 
-    <h3>Course Materials</h3>
-    <?php if (!empty($materials)): ?>
-        <ul class="list-group">
-            <?php foreach ($materials as $material): ?>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <?= esc($material['file_name']); ?>
-                    <a href="/materials/download/<?= $material['id']; ?>" class="btn btn-primary btn-sm">Download</a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php else: ?>
-        <p>No materials have been uploaded for this course yet.</p>
-    <?php endif; ?>
-</div>
-<?= $this->endSection(); ?>
+        .center-wrapper {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .card-header.custom {
+            background-color: var(--maroon);
+            color: var(--white);
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+        .btn-oval {
+            background-color: var(--maroon);
+            color: var(--white);
+            border: 1px solid var(--maroon);
+            border-radius: 999px;
+            padding: 6px 14px;
+            box-shadow: none;
+        }
+
+        .btn-oval:hover, .btn-oval:focus {
+            background-color: var(--maroon-dark);
+            border-color: var(--maroon-dark);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        @media (max-width: 991px) {
+            .dashboard-content { margin-left: 0; }
+            .center-wrapper { padding-left: 16px; padding-right: 16px; }
+        }
+
+        .navbar {
+            background-color: var(--maroon) !important;
+        }
+
+        .navbar .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffffffff !important;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: var(--maroon-dark) !important;
+        }
+
+        .navbar .dropdown-item {
+            color: white !important;    
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: var(--maroon-light) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <?= $this->include('partials/student_sidebar') ?>
+
+        <div id="content" class="dashboard-content">
+            <div class="container py-4">
+                <a href="<?= base_url('student/dashboard') ?>" class="btn btn-oval btn-sm mb-3">&larr; Back to Dashboard</a>
+
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success">
+                        <?= session()->getFlashdata('success') ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= session()->getFlashdata('error') ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="center-wrapper d-flex justify-content-center">
+                    <div class="card border-0 shadow-sm w-100" style="max-width:1000px;">
+                        <div class="card-header custom">
+                            <h5 class="mb-0"><?= esc($course['title'] ?? 'Course') ?></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-4"><?= esc($course['description'] ?? '') ?></p>
+
+                            <h6 class="mb-3">Course Materials (<?= count($materials ?? []) ?>)</h6>
+                            <?php if (empty($materials)): ?>
+                                <p class="text-muted">No materials have been uploaded for this course yet.</p>
+                            <?php else: ?>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:48px">#</th>
+                                                <th>File Name</th>
+                                                <th>Uploaded At</th>
+                                                <th style="width:130px">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($materials as $i => $material): ?>
+                                                <tr>
+                                                    <td><?= $i + 1 ?></td>
+                                                    <td><?= esc($material['file_name']) ?></td>
+                                                    <td>
+                                                        <?php
+                                                            if (!empty($material['created_at']) && $material['created_at'] !== '0000-00-00 00:00:00') {
+                                                                $dt = new \DateTime($material['created_at']);
+                                                                echo $dt->format('M d, Y \a\t h:i A');
+                                                            } else {
+                                                                echo 'N/A';
+                                                            }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <a href="<?= site_url('course/download/' . $material['id']) ?>" class="btn btn-sm btn-outline-primary">Download</a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
