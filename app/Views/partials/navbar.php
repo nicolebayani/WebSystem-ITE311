@@ -26,8 +26,8 @@ $path = trim(service('uri')->getPath(), '/');
                     <a class="nav-link <?= $path === 'contact' ? 'active' : '' ?>" href="<?= site_url('contact') ?>">Contact</a>
                 </li>
 
-                <?php if (session()->get('isLoggedIn')): ?>
-                    <?php $userRole = session()->get('role'); ?>
+                <?php if (false): // Temporarily disabled sessions ?>
+                    <?php $userRole = 'guest'; ?>
                     <li class="nav-item dropdown">
                         <?php
                         // Add an active look to the Dashboard dropdown when any student route is active

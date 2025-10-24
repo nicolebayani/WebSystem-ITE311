@@ -115,7 +115,6 @@ helper('url');
                             <?= session()->getFlashdata('error') ?>
                         </div>
                     <?php endif; ?>
-
                     <div class="center-wrapper d-flex justify-content-center">
                         <div class="card border-0 shadow-sm w-100" style="max-width:1000px;">
                     <div class="card-header custom">
@@ -169,32 +168,6 @@ helper('url');
                                     </tbody>
                                 </table>
                             </div>
-                        <?php endif; ?>
-
-                        <hr class="my-4">
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h6 class="mb-0">Course Materials</h6>
-                            <a href="<?= site_url('teacher/course/' . ($course['id'] ?? '') . '/upload') ?>" class="btn btn-sm btn-primary">Upload Material</a>
-                        </div>
-
-                        <?php if (empty($materials)):
-                            $materials = []; // Ensure materials is an array
-                        endif; ?>
-
-                        <?php if (empty($materials)): ?>
-                            <p class="text-muted">No materials uploaded yet.</p>
-                        <?php else: ?>
-                            <ul class="list-group">
-                                <?php foreach ($materials as $material): ?>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span>
-                                            <a href="<?= site_url('materials/download/' . $material['id']) ?>"><?= esc($material['file_name']) ?></a>
-                                        </span>
-                                        <a href="<?= site_url('materials/delete/' . $material['id']) ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this material?');">Delete</a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
                         <?php endif; ?>
                     </div>
                 </div>

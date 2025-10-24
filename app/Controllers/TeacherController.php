@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\CourseModel;
 use App\Models\EnrollmentModel;
-use App\Models\Material;
 
 class TeacherController extends BaseController
 {
@@ -94,9 +93,6 @@ class TeacherController extends BaseController
                                     ->where('enrollments.status', 'enrolled')
                                     ->orderBy('enrollments.enrollment_date', 'DESC')
                                     ->findAll();
-
-        $materialModel = new Material();
-
         $data = [
             'user' => [
                 'id' => session()->get('userID'),
@@ -104,7 +100,6 @@ class TeacherController extends BaseController
             ],
             'course' => $course,
             'students' => $students,
-            'materials' => $materialModel->getMaterialsByCourse($id),
         ];
 
         return view('teacher/course_details', $data);
@@ -144,6 +139,41 @@ class TeacherController extends BaseController
         }
 
         return redirect()->back()->with('error', 'Failed to unenroll student.');
+    }
+
+    public function courses()
+    {
+        return '<h1>Courses page under construction.</h1>';
+    }
+
+    public function students()
+    {
+        return '<h1>Students page under construction.</h1>';
+    }
+
+    public function assignments()
+    {
+        return '<h1>Assignments page under construction.</h1>';
+    }
+
+    public function gradebook()
+    {
+        return '<h1>Gradebook page under construction.</h1>';
+    }
+
+    public function announcements()
+    {
+        return '<h1>Announcements page under construction.</h1>';
+    }
+
+    public function analytics()
+    {
+        return '<h1>Analytics page under construction.</h1>';
+    }
+
+    public function profile()
+    {
+        return '<h1>Profile page under construction.</h1>';
     }
 
     public function storeCourse()

@@ -3,9 +3,12 @@
 namespace App\Controllers;
 
 use App\Models\EnrollmentModel;
+use App\Models\MaterialModel;
 
 class Course extends BaseController
 {
+    protected $helpers = ['form', 'url'];
+
     public function enroll()
     {
         // Check if the user is logged in.
@@ -39,5 +42,84 @@ class Course extends BaseController
         } else {
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to enroll.']);
         }
+    }
+
+    public function upload($course_id)
+    {
+        $materialModel = new MaterialModel();
+        $data['course_id'] = $course_id;
+
+        if ($this->request->getMethod() === 'post') {
+            $file = $this->request->getFile('material');
+
+            if ($file->isValid() && !$file->hasMoved()) {
+                $newName = $file->getRandomName();
+                $file->move(WRITEPATH . 'uploads', $newName);
+
+                $materialData = [
+                    'course_id' => $course_id,
+                    'file_name' => $file->getClientName(),
+                    'file_path' => $newName,
+                ];
+
+                $materialModel->insertMaterial($materialData);
+
+                return redirect()->back()->with('success', 'File uploaded successfully.');
+            }
+
+            return redirect()->back()->with('error', 'File upload failed.');
+        }
+
+        return view('materials/upload', $data);
+    }
+
+    public function delete($material_id)
+    {
+        $materialModel = new MaterialModel();
+        $material = $materialModel->find($material_id);
+
+        if ($material) {
+            $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
+
+            $materialModel->delete($material_id);
+            return redirect()->back()->with('success', 'Material deleted successfully.');
+        }
+
+        return redirect()->back()->with('error', 'Material not found.');
+    }
+
+    public function download($material_id)
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'You must be logged in to download materials.');
+        }
+
+        $materialModel = new MaterialModel();
+        $material = $materialModel->find($material_id);
+
+        if (!$material) {
+            return redirect()->back()->with('error', 'File not found.');
+        }
+
+        $user_id = session()->get('id');
+        $role = session()->get('role');
+
+        if ($role !== 'teacher') { // Teachers have universal access
+            $enrollmentModel = new EnrollmentModel();
+            if (!$enrollmentModel->isAlreadyEnrolled($user_id, $material['course_id'])) {
+                return redirect()->back()->with('error', 'You are not authorized to download this file.');
+            }
+        }
+
+        $filePath = WRITEPATH . 'uploads/' . $material['file_path'];
+
+        if (file_exists($filePath)) {
+            return $this->response->download($filePath, null)->setFileName($material['file_name']);
+        }
+
+        return redirect()->back()->with('error', 'File not found on server.');
     }
 }

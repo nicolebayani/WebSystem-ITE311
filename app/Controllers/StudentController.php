@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\EnrollmentModel;
 use App\Models\CourseModel;
-use App\Models\Material;
+use App\Models\MaterialModel;
 
 class StudentController extends BaseController
 {
@@ -70,6 +70,14 @@ class StudentController extends BaseController
 
         $enrolled_with_instructor = $builder->findAll();
 
+        // Fetch materials for each enrolled course
+        $materialModel = new MaterialModel();
+        if (!empty($enrolled_with_instructor)) {
+            foreach ($enrolled_with_instructor as &$course) {
+                $course['materials'] = $materialModel->getMaterialsByCourse($course['id']);
+            }
+            unset($course); // Unset reference
+        }
         // Also compute available courses (courses the student is not enrolled in)
         $all_courses = $courseModel->findAll();
         $enrolled_course_ids = array_map(function($course) { return $course['id']; }, $enrolled_with_instructor);
@@ -88,6 +96,36 @@ class StudentController extends BaseController
         ];
 
         return view('student/courses', $data);
+    }
+
+    public function assignments()
+    {
+        return '<h1>Assignments page under construction.</h1>';
+    }
+
+    public function grades()
+    {
+        return '<h1>Grades page under construction.</h1>';
+    }
+
+    public function progress()
+    {
+        return '<h1>Progress page under construction.</h1>';
+    }
+
+    public function calendar()
+    {
+        return '<h1>Calendar page under construction.</h1>';
+    }
+
+    public function announcements()
+    {
+        return '<h1>Announcements page under construction.</h1>';
+    }
+
+    public function profile()
+    {
+        return '<h1>Profile page under construction.</h1>';
     }
 
     /**
@@ -210,7 +248,7 @@ class StudentController extends BaseController
         }
 
         $courseModel = new CourseModel();
-        $materialModel = new Material();
+        $materialModel = new MaterialModel();
 
         $data = [
             'course' => $courseModel->find($course_id),
