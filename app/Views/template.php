@@ -77,12 +77,12 @@ $path = trim(service('uri')->getPath(), '/');
                                 <li><a class="dropdown-item" href="#">Manage Courses</a></li>
                             <?php elseif ($userRole === 'teacher'): ?>
                                 <li><a class="dropdown-item" href="<?= site_url('teacher/dashboard') ?>">Teacher Dashboard</a></li>
-                                <li><a class="dropdown-item" href="#">My Courses</a></li>
-                                <li><a class="dropdown-item" href="#">Create Course</a></li>
+                                <li><a class="dropdown-item" href="<?= site_url('teacher/courses') ?>">My Courses</a></li>
+                                <li><a class="dropdown-item" href="<?= site_url('teacher/create-course') ?>">Create Course</a></li>
                             <?php elseif ($userRole === 'student'): ?>
                                 <li><a class="dropdown-item" href="<?= site_url('student/dashboard') ?>">Student Dashboard</a></li>
-                                <li><a class="dropdown-item" href="#">My Courses</a></li>
-                                <li><a class="dropdown-item" href="#">Grades</a></li>
+                                <li><a class="dropdown-item" href="<?= site_url('student/courses') ?>">My Courses</a></li>
+                                <li><a class="dropdown-item" href="<?= site_url('student/grades') ?>">Grades</a></li>
                             <?php else: ?>
                                 <li><a class="dropdown-item" href="<?= site_url('user/dashboard') ?>">User Dashboard</a></li>
                             <?php endif; ?>

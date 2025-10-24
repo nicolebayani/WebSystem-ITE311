@@ -12,7 +12,7 @@ class EnrollmentModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id', 'course_id', 'enrollment_date'];
+    protected $allowedFields    = ['user_id', 'course_id', 'enrollment_date', 'status'];
 
     // Dates
     protected $useTimestamps = false;
@@ -70,7 +70,48 @@ class EnrollmentModel extends Model
     public function isAlreadyEnrolled($user_id, $course_id)
     {
         return $this->where('user_id', $user_id)
-                    ->where('course_id', $course_id)
-                    ->countAllResults() > 0;
+                   ->where('course_id', $course_id)
+                   ->countAllResults() > 0;
+    }
+
+    /**
+     * Count enrolled students for given course IDs.
+     * Returns an associative array keyed by course_id => student_count
+     * If $courseIds is empty, returns counts for all courses.
+     *
+     * @param array $courseIds
+     * @return array
+     */
+    public function countStudentsByCourseIds(array $courseIds = [])
+    {
+        $builder = $this->select('course_id, COUNT(*) AS students')
+                        ->where('status', 'enrolled')
+                        ->groupBy('course_id');
+
+        if (!empty($courseIds)) {
+            $builder->whereIn('course_id', $courseIds);
+        }
+
+        $rows = $builder->findAll();
+
+        $result = [];
+        foreach ($rows as $row) {
+            $result[$row['course_id']] = (int) $row['students'];
+        }
+
+        return $result;
+    }
+
+    /**
+     * Remove an enrollment record for a user in a course.
+     * @param int $courseId
+     * @param int $userId
+     * @return bool
+     */
+    public function removeEnrollment(int $courseId, int $userId): bool
+    {
+        return (bool) $this->where('course_id', $courseId)
+                           ->where('user_id', $userId)
+                           ->delete();
     }
 }

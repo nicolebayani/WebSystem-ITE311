@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\EnrollmentModel;
 use App\Models\CourseModel;
+use App\Models\Material;
 
 class StudentController extends BaseController
 {
@@ -18,12 +19,12 @@ class StudentController extends BaseController
 
         $enrollmentModel = new EnrollmentModel();
         $courseModel = new CourseModel();
-        $user_id = session()->get('id');
+        $user_id = session()->get('userID');
 
         $enrolled_courses = $enrollmentModel->getUserEnrollments($user_id);
         $all_courses = $courseModel->findAll();
 
-        $enrolled_course_ids = array_column($enrolled_courses, 'id');
+        $enrolled_course_ids = array_map(function($course) { return $course['id']; }, $enrolled_courses);
 
         $available_courses = array_filter($all_courses, function($course) use ($enrolled_course_ids) {
             return !in_array($course['id'], $enrolled_course_ids);
@@ -39,9 +40,9 @@ class StudentController extends BaseController
             ],
             'enrolled_courses' => $enrolled_courses, 
             'available_courses' => $available_courses,
-            'upcoming_deadlines' => [], // Will be populated with upcoming deadlines
-            'recent_grades' => [], // Will be populated with recent grades/feedback
-            'notifications' => [] // Will be populated with notifications
+            'upcoming_deadlines' => [],
+            'recent_grades' => [],
+            'notifications' => []
         ];
 
         return view('student/dashboard', $data);
@@ -57,12 +58,21 @@ class StudentController extends BaseController
 
         $enrollmentModel = new EnrollmentModel();
         $courseModel = new CourseModel();
-        $user_id = session()->get('id');
+        $user_id = session()->get('userID');
 
-        $enrolled_courses = $enrollmentModel->getUserEnrollments($user_id);
+        // Get courses the student is enrolled in, including course description and instructor name
+        // We'll join courses -> enrollments -> users (instructor)
+        $builder = $enrollmentModel->select('courses.id as id, courses.title, courses.description, courses.instructor_id, users.name as instructor_name')
+                               ->join('courses', 'courses.id = enrollments.course_id')
+                               ->join('users', 'users.id = courses.instructor_id', 'left')
+                               ->where('enrollments.user_id', $user_id)
+                               ->where('enrollments.status', 'enrolled');
+
+        $enrolled_with_instructor = $builder->findAll();
+
+        // Also compute available courses (courses the student is not enrolled in)
         $all_courses = $courseModel->findAll();
-
-        $enrolled_course_ids = array_column($enrolled_courses, 'id');
+        $enrolled_course_ids = array_map(function($course) { return $course['id']; }, $enrolled_with_instructor);
 
         $available_courses = array_filter($all_courses, function($course) use ($enrolled_course_ids) {
             return !in_array($course['id'], $enrolled_course_ids);
@@ -74,8 +84,139 @@ class StudentController extends BaseController
                 'name' => session()->get('name'),
             ],
             'available_courses' => $available_courses,
+            'enrolled_courses' => $enrolled_with_instructor,
         ];
 
         return view('student/courses', $data);
+    }
+
+    /**
+     * Handle course enrollment
+     */
+    public function enroll()
+    {
+        log_message('info', 'Enrollment request received');
+        
+        try {
+            // Check if user is logged in and has student role
+            if (!session()->get('isLoggedIn') || session()->get('role') !== 'student') {
+                $message = 'You must be logged in as a student to enroll in courses.';
+                log_message('error', 'Unauthorized enrollment attempt - User not logged in or not a student');
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => $message
+                ])->setStatusCode(401);
+            }
+
+            $course_id = $this->request->getPost('course_id');
+            $user_id = session()->get('userID');
+            
+            log_message('debug', 'Enrollment attempt - User ID: ' . $user_id . ', Course ID: ' . $course_id);
+
+            if (empty($course_id)) {
+                $message = 'Course ID is required.';
+                log_message('error', 'Enrollment failed - ' . $message);
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => $message
+                ])->setStatusCode(400);
+            }
+
+            $db = \Config\Database::connect();
+            $enrollmentModel = new EnrollmentModel();
+            
+            // Check if already enrolled
+            if ($enrollmentModel->isAlreadyEnrolled($user_id, $course_id)) {
+                $message = 'You are already enrolled in this course.';
+                log_message('info', 'Enrollment failed - ' . $message . ' (User: ' . $user_id . ', Course: ' . $course_id . ')');
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => $message
+                ]);
+            }
+
+            // Get course details
+            $courseModel = new CourseModel();
+            $course = $courseModel->find($course_id);
+            if (!$course) {
+                $message = 'Invalid course.';
+                log_message('error', 'Enrollment failed - ' . $message . ' (Course ID: ' . $course_id . ')');
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => $message
+                ])->setStatusCode(404);
+            }
+
+            // Start transaction
+            $db->transStart();
+
+            try {
+                // Enroll the student
+                // Note: some environments may have an older enrollments table without
+                // the `enrollment_date` column. To be defensive, don't include the
+                // field in the insert payload so the query won't fail in that case.
+                $enrollmentData = [
+                    'user_id' => $user_id,
+                    'course_id' => $course_id,
+                    'status' => 'enrolled'
+                ];
+
+                log_message('debug', 'Prepared enrollment data (without enrollment_date) for insert');
+
+                // Use the model's insert method directly
+                $enrollmentId = $enrollmentModel->insert($enrollmentData);
+                
+                if ($enrollmentId) {
+                    $db->transCommit();
+                    log_message('info', 'Successfully enrolled user ' . $user_id . ' in course ' . $course_id);
+                    return $this->response->setJSON([
+                        'success' => true,
+                        'message' => 'Successfully enrolled in ' . $course['title'],
+                        'course' => [
+                            'id' => $course_id,
+                            'title' => $course['title']
+                        ]
+                    ]);
+                } else {
+                    throw new \Exception('Failed to insert enrollment record');
+                }
+            } catch (\Exception $e) {
+                $db->transRollback();
+                throw $e;
+            }
+            
+        } catch (\Exception $e) {
+            log_message('error', 'Error in enroll(): ' . $e->getMessage());
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'An error occurred while processing your request: ' . $e->getMessage()
+            ])->setStatusCode(500);
+        }
+    }
+
+    public function course_view($course_id)
+    {
+        if (!session()->get('isLoggedIn') || session()->get('role') !== 'student') {
+            session()->setFlashdata('error', 'You do not have permission to access this page.');
+            return redirect()->to('/login');
+        }
+
+        $enrollmentModel = new EnrollmentModel();
+        $user_id = session()->get('userID');
+
+        if (!$enrollmentModel->isEnrolled($user_id, $course_id)) {
+            session()->setFlashdata('error', 'You are not enrolled in this course.');
+            return redirect()->to('/student/courses');
+        }
+
+        $courseModel = new CourseModel();
+        $materialModel = new Material();
+
+        $data = [
+            'course' => $courseModel->find($course_id),
+            'materials' => $materialModel->getMaterialsByCourse($course_id)
+        ];
+
+        return view('student/course_view', $data);
     }
 }

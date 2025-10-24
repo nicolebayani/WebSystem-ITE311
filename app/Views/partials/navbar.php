@@ -2,7 +2,7 @@
 helper('url');
 $path = trim(service('uri')->getPath(), '/');
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #800000;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #800000 !important;">
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand fw-bold text-white" href="<?= site_url() ?>">LEARNIFY</a>
@@ -29,7 +29,11 @@ $path = trim(service('uri')->getPath(), '/');
                 <?php if (session()->get('isLoggedIn')): ?>
                     <?php $userRole = session()->get('role'); ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <?php
+                        // Add an active look to the Dashboard dropdown when any student route is active
+                        $isStudentSection = strpos($path, 'student') === 0;
+                        ?>
+                        <a class="nav-link dropdown-toggle <?= $isStudentSection ? 'active' : '' ?>" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Dashboard
                         </a>
@@ -44,7 +48,7 @@ $path = trim(service('uri')->getPath(), '/');
                                 <li><a class="dropdown-item" href="#">Create Course</a></li>
                             <?php elseif ($userRole === 'student'): ?>
                                 <li><a class="dropdown-item" href="<?= site_url('student/dashboard') ?>">Student Dashboard</a></li>
-                                <li><a class="dropdown-item" href="#">My Courses</a></li>
+                                <li><a class="dropdown-item" href="<?= site_url('student/courses') ?>">My Courses</a></li>
                                 <li><a class="dropdown-item" href="#">Grades</a></li>
                             <?php else: ?>
                                 <li><a class="dropdown-item" href="<?= site_url('user/dashboard') ?>">User Dashboard</a></li>
@@ -130,5 +134,38 @@ $path = trim(service('uri')->getPath(), '/');
 
     .navbar-toggler-icon {
         filter: brightness(0) invert(1);
+    }
+</style>
+
+<!-- Additional rule: ensure collapsed nav (mobile) uses maroon background for active items -->
+<style>
+    /* Stronger rules to prevent other CSS from overriding the navbar color */
+    .navbar,
+    .navbar-collapse,
+    .navbar.navbar-dark {
+        background-color: #800000 !important;
+        border-color: #800000 !important;
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand,
+    .navbar .dropdown-item {
+        color: #ffffffcc !important;
+    }
+
+    .navbar .nav-link.active {
+        color: #fff !important;
+        background-color: rgba(255,255,255,0.12) !important;
+        border-radius: 5px;
+    }
+
+    /* Ensure the dropdown toggle text remains white when active */
+    .navbar .dropdown-toggle.active {
+        color: #fff !important;
+    }
+
+    /* Ensure the collapsed (mobile) menu has maroon background so active shows consistently */
+    .navbar-collapse {
+        background-color: #800000 !important;
     }
 </style>
