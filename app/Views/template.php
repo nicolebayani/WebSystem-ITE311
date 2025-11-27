@@ -15,6 +15,7 @@ $path = trim(service('uri')->getPath(), '/');
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         body {
@@ -66,6 +67,34 @@ $path = trim(service('uri')->getPath(), '/');
                 
                 <?php if (session()->get('isLoggedIn')): ?>
                     <?php $userRole = session()->get('role'); ?>
+                    
+                    <!-- Notifications -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link position-relative" href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                            </svg>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="notification-badge" style="display: none;">
+                                0
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="notificationsDropdown" style="min-width: 300px; max-height: 400px; overflow-y: auto;">
+                            <li class="dropdown-header d-flex justify-content-between align-items-center">
+                                <span>Notifications</span>
+                                <button class="btn btn-sm btn-outline-secondary" id="mark-all-read" style="display: none;">Mark all read</button>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li id="notifications-list">
+                                <div class="text-center text-muted py-3">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <div class="mt-2">Loading notifications...</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dashboard
@@ -110,6 +139,8 @@ $path = trim(service('uri')->getPath(), '/');
         <h1>Welcome to LEARNIFY</h1>
     </div>
 </div>
+
+<!-- Notifications script moved to a single location in the admin layout to avoid duplicates -->
 
 </body>
 </html>
