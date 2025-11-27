@@ -5,6 +5,7 @@
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
             --maroon: #800000;
@@ -222,6 +223,23 @@
                     </div>
                 </div>
 
+                <!-- Courses Card with Search -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Courses</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="searchForm" action="<?= site_url('/courses/search') ?>" method="get" class="mb-3">
+                            <div class="input-group">
+                                <input type="text" id="searchInput" name="search_term" class="form-control" placeholder="Search courses...">
+                                <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i> Search</button>
+                            </div>
+                        </form>
+                        <div id="coursesContainer" class="list-group mt-3"></div>
+                        <a href="<?= site_url('admin/courses/create') ?>" class="btn btn-primary mt-3">Create New Course</a>
+                    </div>
+                </div>
+
                 <!-- Maroon Navbar Header -->
                 <div class="card border-0 shadow-sm">
                     <div class="card-header d-flex justify-content-between align-items-center">
@@ -267,6 +285,39 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Server-side search with AJAX
+        $('#searchForm').on('submit', function(e) {
+            e.preventDefault();
+            var searchTerm = $('#searchInput').val();
+
+            $.get('<?= site_url('/courses/search') ?>', { search_term: searchTerm }, function(data) {
+                var coursesContainer = $('#coursesContainer');
+                coursesContainer.empty();
+
+                if (data.length > 0) {
+                    $.each(data, function(index, course) {
+                        var courseHtml = 
+                            '<div class="col-md-4 mb-4 course-card">' +
+                                '<div class="card h-100">' +
+                                    '<div class="card-body">' +
+                                        '<h5 class="card-title">' + (course.course_name || 'Untitled Course') + '</h5>' +
+                                        '<p class="card-text">' + (course.course_description || 'No description.') + '</p>' +
+                                        '<a href="#" class="btn btn-primary">View Course</a>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
+                        coursesContainer.append(courseHtml);
+                    });
+                } else {
+                    coursesContainer.html('<div class="alert alert-info">No courses found matching your search.</div>');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>

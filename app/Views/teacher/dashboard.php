@@ -9,10 +9,12 @@ helper('url');
     <title>Teacher Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url('css/modern.css?v=1.0') ?>" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
             --maroon: #800000;
             --maroon-dark: #5c0000;
+            --maroon-light: #a13c3c;
             --white: #ffffff;
         }
 
@@ -72,6 +74,25 @@ helper('url');
         .text-muted {
             color: #6c757d !important;
         }
+
+        #searchInput {
+            border-color: var(--maroon-light);
+        }
+
+        #searchInput:focus {
+            border-color: var(--maroon);
+            box-shadow: 0 0 0 0.25rem rgba(128, 0, 0, 0.25);
+        }
+
+        .btn-outline-primary {
+            color: var(--maroon);
+            border-color: var(--maroon);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--maroon);
+            color: var(--white);
+        }
     </style>
 </head>
 <body>
@@ -92,22 +113,39 @@ helper('url');
                                 <h5 class="mb-0">Your Courses</h5>
                             </div>
                             <div class="card-body">
-                                <?php $courses = $courses ?? []; ?>
-                                <?php if (empty($courses)): ?>
-                                    <p class="text-muted mb-0">No courses yet. Use the button to create one.</p>
-                                <?php else: ?>
-                                    <div class="list-group">
-                                        <?php foreach ($courses as $course): ?>
-                                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                                <span><?= esc($course['title'] ?? 'Untitled Course') ?></span>
-                                                <span class="badge bg-secondary"><?= esc($course['students'] ?? 0) ?> students</span>
-                                            </a>
-                                        <?php endforeach; ?>
+                                <form id="searchForm" action="<?= site_url('/courses/search') ?>" method="get" class="mb-3">
+                                    <div class="input-group">
+                                        <input type="text" id="searchInput" name="search_term" class="form-control" placeholder="Search courses...">
+                                        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i> Search</button>
                                     </div>
-                                <?php endif; ?>
+                                </form>
+
+                                <?php $courses = $courses ?? []; ?>
+                                <div id="coursesContainer" class="row">
+                                    <?php if (empty($courses)): ?>
+                                        <div class="col-12">
+                                            <p class="text-muted mb-0">No courses yet. Use the button to create one.</p>
+                                        </div>
+                                    <?php else: ?>
+                                        <?php foreach ($courses as $course): ?>
+                                            <div class="col-md-6 mb-4 course-card">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><?= esc($course['title'] ?? 'Untitled Course') ?></h5>
+                                                        <p class="card-text"><?= esc($course['description'] ?? 'No description.') ?></p>
+                                                        <a href="<?= site_url('teacher/course/' . ($course['id'] ?? '')) ?>" class="btn btn-primary">View Course</a>
+                                                    </div>
+                                                    <div class="card-footer text-muted">
+                                                        <?= esc($course['students'] ?? 0) ?> students enrolled
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                             <div class="card-footer bg-white text-end">
-                                <a class="btn btn-primary" href="#">Create New Course</a>
+                                <a class="btn btn-primary" href="<?= base_url('teacher/create-course') ?>">Create New Course</a>
                             </div>
                         </div>
                     </div>
@@ -154,6 +192,51 @@ helper('url');
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Client-side filtering
+        $('#searchInput').on('keyup', function() {
+            var value = $(this).val().toLowerCase();
+            $('.course-card').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+
+        // Server-side search with AJAX
+        $('#searchForm').on('submit', function(e) {
+            e.preventDefault();
+            console.log('Search form submitted'); // Debugging line
+            var searchTerm = $('#searchInput').val();
+
+            $.get('<?= site_url('/courses/search') ?>', { search_term: searchTerm }, function(data) {
+                var coursesContainer = $('#coursesContainer');
+                coursesContainer.empty();
+
+                if (data.length > 0) {
+                    $.each(data, function(index, course) {
+                        var courseHtml = 
+                            '<div class="col-md-6 mb-4 course-card">' +
+                                '<div class="card h-100">' +
+                                    '<div class="card-body">' +
+                                        '<h5 class="card-title">' + (course.title || 'Untitled Course') + '</h5>' +
+                                        '<p class="card-text">' + (course.description || 'No description.') + '</p>' +
+                                        '<a href="<?= site_url('teacher/course/') ?>' + course.id + '" class="btn btn-primary">View Course</a>' +
+                                    '</div>' +
+                                    '<div class="card-footer text-muted">' +
+                                        (course.students || 0) + ' students enrolled' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
+                        coursesContainer.append(courseHtml);
+                    });
+                } else {
+                    coursesContainer.html('<div class="alert alert-info">No courses found matching your search.</div>');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>

@@ -19,12 +19,12 @@ class Filters extends BaseFilters
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
      *
-     * @var array<string, class-string|list<class-string>>
-     *
-     * [filter_name => classname]
-     * or [filter_name => [classname1, classname2, ...]]
+     * @var array<string, class-string|list<class-string>> [filter_name => classname]
+     *                                                     or [filter_name => [classname1, classname2, ...]]
      */
     public array $aliases = [
+        // Application filters
+        'auth'          => \App\Filters\Auth::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
@@ -73,7 +73,9 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             // 'honeypot',
-            // 'csrf',
+            'csrf' => [
+                'except' => ['login', 'login/*', 'auth/*']  // Exclude login and auth routes from CSRF
+            ],
             // 'invalidchars',
         ],
         'after' => [

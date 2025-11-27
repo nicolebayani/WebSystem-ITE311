@@ -53,7 +53,7 @@
                         Learning
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="learningDropdown">
-                        <li><a class="dropdown-item" href="<?= site_url('student/dashboard') ?>">
+                        <li><a class="dropdown-item" href="<?= site_url('student/courses') ?>">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="me-2">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
@@ -119,6 +119,17 @@
 
             <!-- Right side grouped navigation -->
             <ul class="navbar-nav">
+                <!-- Notifications Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge bg-danger" id="notification-badge" style="display: none;"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" id="notification-list" aria-labelledby="notificationDropdown">
+                        <li><span class="dropdown-item-text">Loading...</span></li>
+                    </ul>
+                </li>
+
                 <!-- Account Group -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

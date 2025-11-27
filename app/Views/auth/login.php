@@ -315,27 +315,21 @@
                     </div>
                 <?php endif; ?>
 
-                <form method="POST" action="<?= base_url('login') ?>">
-                    <div class="form-group has-icon">
-                        <label for="email" class="form-label">
-                            <i class="fas fa-envelope"></i> Email Address
-                        </label>
-                        <input type="email" class="form-control" id="email" name="email" 
-                               value="<?= old('email') ?>" required placeholder="Enter your email">
-                    </div>
-
-                    <div class="form-group has-icon">
-                        <label for="password" class="form-label">
-                            <i class="fas fa-lock"></i> Password
-                        </label>
-                        <input type="password" class="form-control" id="password" name="password" 
-                               required placeholder="Enter your password">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-sign-in-alt"></i> Sign In
-                    </button>
-                </form>
+               <form method="post" action="<?= base_url('login') ?>">
+    <?= csrf_field() ?>
+    
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
 
                 <div class="divider">
                     <span>or</span>
